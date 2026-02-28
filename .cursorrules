@@ -1,0 +1,82 @@
+# ReeveOS Homepage — Cursor Rules
+
+## Project
+Single-page marketing homepage for ReeveOS (reeveos.app) — a zero-commission booking, ordering, and business management platform for UK independent businesses.
+
+## Tech Stack
+- Vite + React (JSX, not TypeScript)
+- Tailwind CSS v3
+- Framer Motion for animations
+- Single page, no routing needed
+- Deploy target: Vercel
+
+## Brand Tokens — LOCKED, NO EXCEPTIONS
+
+### Colours
+- Rich Black: #111111 (50% dominant — backgrounds, nav, footer)
+- Dark Surface: #181818 (card backgrounds, alternating sections)
+- Gold: #C9A84C (15% accent — CTAs, labels, highlights, borders)
+- Warm White: #FAFAF8 (30% — body text, headings)
+- Mid Grey: #999999 (muted text, sublines)
+- Border: #222222 (subtle dividers, card borders)
+
+### Typography
+- Font: Figtree ONLY — no other fonts, ever
+- Load from Google Fonts: weights 300, 400, 500, 600, 700, 800
+- Headlines: weight 800, letter-spacing -0.035em
+- Body: weight 400, line-height 1.7
+- UI/Buttons: weight 600-700
+- Labels: weight 600, uppercase, letter-spacing 0.15em, font-size 12px
+
+### UI Details
+- Card border-radius: 16-20px
+- Button border-radius: 10-12px
+- Pill badges: border-radius 100px
+- Section spacing: 100px+ vertical padding
+- Minimal shadows, prefer border + subtle glow for elevation
+- Gold-bordered cards for emphasis (1px solid rgba(201,168,76,0.3))
+
+## Design Source
+The homepage design is in Figma. Use the Figma MCP to read the design file when prompted with a Figma link. Extract all layout, spacing, colours, typography, and content directly from the Figma file.
+
+## Figma Link
+https://www.figma.com/design/V4v1EQKpNiZfKxobV1l5en/UX-Pilot--AI-UI-Generator---AI-Wireframe-Generator--Community-?node-id=1-5&t=fxTsr8HWHlHEg9Yw-1
+
+## Section Structure (11 sections)
+1. Sticky Nav — Gold R mark + white wordmark, transparent → dark on scroll
+2. Hero — Rotating headline word (restaurant/barber/café/etc), two CTAs
+3. Social Proof Bar — Stats strip
+4. The Problem — Commission comparison cards
+5. Features — 3x3 grid with real photos
+6. Business Types — Horizontal scroll cards (6 verticals)
+7. Dashboard Preview — Browser-frame mockup
+8. Testimonials — Three quote cards
+9. Pricing — Free / Growth £29 / Scale £59
+10. Gold CTA — Only section with gold background
+11. Footer — Four columns, Gold R mark
+
+## Image Strategy
+- Use high-quality Unsplash images for all photography
+- British high street, real businesses, warm natural light
+- Each feature card and business type card needs a relevant image
+- Hero: British high street at golden hour OR business montage
+
+## Key Rules
+1. Figtree ONLY — never use any other font
+2. Dark-first — Rich Black dominant, Gold is accent not primary
+3. Responsive — mobile-first, works perfectly on all screen sizes
+4. Real images — use Unsplash URLs, never grey placeholders
+5. British spelling — colours not colors, organisation not organization
+6. Premium feel — must look like a £100k brand, Stripe-quality polish
+7. All animations subtle — no bouncing, no excessive movement
+
+## Pricing Data
+- Free: £0/mo, 1 staff login, 100 bookings/mo, basic listing
+- Growth: £29/mo (MOST POPULAR), 5 staff, deposits, CRM, marketing tools
+- Scale: £59/mo, unlimited staff, floor plan, white-label, priority support
+- All plans: 0% commission, card processing from 0.3% via Dojo
+
+## Testimonials (use these exactly)
+1. Sadkine K., Micho Turkish Bar & Grill, Nottingham
+2. Marcus T., Sharp Cuts Barbershop, Beeston
+3. Amy R., The Corner Pantry, West Bridgford
