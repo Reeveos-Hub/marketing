@@ -37,7 +37,22 @@ Single-page marketing homepage for ReeveOS (reeveos.app) — a zero-commission b
 - Gold-bordered cards for emphasis (1px solid rgba(201,168,76,0.3))
 
 ## Design Source
-The homepage design is in Figma. Use the Figma MCP to read the design file when prompted with a Figma link. Extract all layout, spacing, colours, typography, and content directly from the Figma file.
+The exact Figma design data is available in this repo:
+- `figma-design-tree.txt` — Full layer tree with colours, fonts, sizes, text, layout modes, borders, radii
+- `figma-image-urls.json` — Signed URLs for all images used in the design
+- `figma-raw.json` — Complete Figma API response (if fetched)
+
+To refresh from Figma: `node fetch-figma.js` (requires FIGMA_TOKEN in .env)
+
+ALWAYS read `figma-design-tree.txt` before making any changes. Match the exact:
+- Colours (hex values from bg: fields)
+- Font sizes (from font: fields, e.g. font:Figtree/400/48.0px)
+- Dimensions (from [width×height] brackets)
+- Text content (from quoted strings)
+- Border colours and radii
+- Layout directions and spacing (from flex: and pad: fields)
+
+Do NOT guess. Every value is in the tree file.
 
 ## Figma Link
 https://www.figma.com/design/V4v1EQKpNiZfKxobV1l5en/UX-Pilot--AI-UI-Generator---AI-Wireframe-Generator--Community-?node-id=1-5&t=fxTsr8HWHlHEg9Yw-1

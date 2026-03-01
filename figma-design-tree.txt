@@ -1,0 +1,359 @@
+body (FRAME) [1440×5056] bg:#111111 border:#e5e7eb
+  section (FRAME) [1440×728] bg:#111111 border:#e5e7eb
+    div (FRAME) [1280×600] bg:#000000@0.0 border:#e5e7eb
+      div (FRAME) [1216×600] bg:#000000@0.0 border:#e5e7eb
+        img (FRAME) [1443×727] [IMAGE] border:#e5e7eb
+        div (FRAME) [576×496] bg:#000000@0.0 border:#e5e7eb
+          Run your restaurant without the middleman. (TEXT) [402×288] bg:#000000 font:Inter/400/12.0px "Run your 
+restaurant
+ without the 
+middleman."
+          p (FRAME) [576×68] bg:#000000@0.0 border:#e5e7eb
+            Bookings, orders, payments, CRM, and marketing — one system. You keep 100% of the revenue. (TEXT) [551×68] bg:#fafaf8 font:Figtree/400/20.0px "Bookings, orders, payments, CRM, and marketing — one system. 
+You keep 100% of t"
+          div (FRAME) [576×60] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [205×60] bg:#c9a84c r:12.0 border:#e5e7eb
+              Get Started Free → (TEXT) [213×20] bg:#111111 font:Figtree/400/16.0px "Get Started Free →"
+            div (FRAME) [164×60] bg:#000000@0.0 r:12.0 border:#fafaf8
+              Book a Demo (TEXT) [172×20] bg:#fafaf8 font:Figtree/400/16.0px "Book a Demo"
+  section (FRAME) [1440×234] bg:#111111 border:#222222
+    div (FRAME) [1280×136] bg:#000000@0.0 border:#e5e7eb
+      p (FRAME) [1216×24] bg:#000000@0.0 border:#e5e7eb
+        Built for independent businesses across the UK (TEXT) [315×24] bg:#999999 font:Figtree/400/16.0px "Built for independent businesses across the UK"
+      div (FRAME) [1216×80] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [280×80] bg:#000000@0.0 border:#e5e7eb
+          div (FRAME) [280×48] bg:#000000@0.0 border:#e5e7eb
+            0% (TEXT) [288×58] bg:#c9a84c font:Figtree/400/48.0px "0%"
+          div (FRAME) [280×24] bg:#000000@0.0 border:#e5e7eb
+            Commission (TEXT) [288×20] bg:#999999 font:Figtree/400/16.0px "Commission"
+        div (FRAME) [280×80] bg:#000000@0.0 border:#e5e7eb
+          div (FRAME) [280×48] bg:#000000@0.0 border:#e5e7eb
+            100% (TEXT) [288×58] bg:#c9a84c font:Figtree/400/48.0px "100%"
+          div (FRAME) [280×24] bg:#000000@0.0 border:#e5e7eb
+            Your Revenue (TEXT) [288×20] bg:#999999 font:Figtree/400/16.0px "Your Revenue"
+        div (FRAME) [280×80] bg:#000000@0.0 border:#e5e7eb
+          div (FRAME) [280×48] bg:#000000@0.0 border:#e5e7eb
+            £0 (TEXT) [288×58] bg:#c9a84c font:Figtree/400/48.0px "£0"
+          div (FRAME) [280×24] bg:#000000@0.0 border:#e5e7eb
+            To Start (TEXT) [288×20] bg:#999999 font:Figtree/400/16.0px "To Start"
+        div (FRAME) [280×80] bg:#000000@0.0 border:#e5e7eb
+          div (FRAME) [280×48] bg:#000000@0.0 border:#e5e7eb
+            24/7 (TEXT) [288×58] bg:#c9a84c font:Figtree/400/48.0px "24/7"
+          div (FRAME) [280×24] bg:#000000@0.0 border:#e5e7eb
+            Support (TEXT) [288×20] bg:#999999 font:Figtree/400/16.0px "Support"
+  section (FRAME) [1440×620] bg:#111111 border:#e5e7eb
+    div (FRAME) [1280×364] bg:#000000@0.0 border:#e5e7eb
+      div (FRAME) [1216×84] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [1216×20] bg:#000000@0.0 border:#e5e7eb
+          THE PROBLEM (TEXT) [1224×17] bg:#c9a84c font:Figtree/400/14.0px "THE PROBLEM"
+        h2 (FRAME) [1216×48] bg:#000000@0.0 border:#e5e7eb
+          You're funding Silicon Valley with every order. (TEXT) [944×48] bg:#fafaf8 font:Figtree/400/48.0px "You're funding Silicon Valley with every order."
+      div (FRAME) [1216×216] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [286×216] bg:#181818 r:16.0 border:#222222
+          div (FRAME) [220×28] bg:#000000@0.0 border:#e5e7eb
+            Deliveroo (TEXT) [228×24] bg:#fafaf8 font:Figtree/400/20.0px "Deliveroo"
+          div (FRAME) [220×60] bg:#000000@0.0 border:#e5e7eb
+            35% (TEXT) [228×72] bg:#00ccbc font:Figtree/400/60.0px "35%"
+          div (FRAME) [220×20] bg:#000000@0.0 border:#e5e7eb
+            per order (TEXT) [228×17] bg:#999999 font:Figtree/400/14.0px "per order"
+          div (FRAME) [220×8] bg:#222222 r:9999.0 border:#e5e7eb
+            div (FRAME) [77×1] bg:#00ccbc r:9999.0 border:#e5e7eb
+        div (FRAME) [286×216] bg:#181818 r:16.0 border:#222222
+          div (FRAME) [220×28] bg:#000000@0.0 border:#e5e7eb
+            UberEats (TEXT) [228×24] bg:#fafaf8 font:Figtree/400/20.0px "UberEats"
+          div (FRAME) [220×60] bg:#000000@0.0 border:#e5e7eb
+            30% (TEXT) [228×72] bg:#06c167 font:Figtree/400/60.0px "30%"
+          div (FRAME) [220×20] bg:#000000@0.0 border:#e5e7eb
+            per order (TEXT) [228×17] bg:#999999 font:Figtree/400/14.0px "per order"
+          div (FRAME) [220×8] bg:#222222 r:9999.0 border:#e5e7eb
+            div (FRAME) [66×1] bg:#06c167 r:9999.0 border:#e5e7eb
+        div (FRAME) [286×216] bg:#181818 r:16.0 border:#222222
+          div (FRAME) [220×28] bg:#000000@0.0 border:#e5e7eb
+            Just Eat (TEXT) [228×24] bg:#fafaf8 font:Figtree/400/20.0px "Just Eat"
+          div (FRAME) [220×60] bg:#000000@0.0 border:#e5e7eb
+            14%+ (TEXT) [228×72] bg:#ff4c00 font:Figtree/400/60.0px "14%+"
+          div (FRAME) [220×20] bg:#000000@0.0 border:#e5e7eb
+            per order (TEXT) [228×17] bg:#999999 font:Figtree/400/14.0px "per order"
+          div (FRAME) [220×8] bg:#222222 r:9999.0 border:#e5e7eb
+            div (FRAME) [31×1] bg:#ff4c00 r:9999.0 border:#e5e7eb
+        div (FRAME) [286×216] bg:#181818 r:16.0 border:#c9a84c
+          div (FRAME) [218×28] bg:#000000@0.0 border:#e5e7eb
+            ReeveOS (TEXT) [226×24] bg:#fafaf8 font:Figtree/400/20.0px "ReeveOS"
+          div (FRAME) [218×60] bg:#000000@0.0 border:#e5e7eb
+            0% (TEXT) [226×72] bg:#c9a84c font:Figtree/400/60.0px "0%"
+          div (FRAME) [218×20] bg:#000000@0.0 border:#e5e7eb
+            per order (TEXT) [226×17] bg:#999999 font:Figtree/400/14.0px "per order"
+          div (FRAME) [218×8] bg:#222222 r:9999.0 border:#e5e7eb
+  section (FRAME) [1440×1502] bg:#181818 border:#e5e7eb
+    div (FRAME) [1280×1246] bg:#000000@0.0 border:#e5e7eb
+      div (FRAME) [1216×136] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [1216×20] bg:#000000@0.0 border:#e5e7eb
+          EVERYTHING YOU NEED (TEXT) [1224×17] bg:#c9a84c font:Figtree/400/14.0px "EVERYTHING YOU NEED"
+        h2 (FRAME) [1216×48] bg:#000000@0.0 border:#e5e7eb
+          One system. Nothing missing. (TEXT) [621×48] bg:#fafaf8 font:Figtree/400/48.0px "One system. Nothing missing."
+        From first booking to repeat customer. (TEXT) [327×28] bg:#999999 font:Figtree/400/20.0px "From first booking to repeat customer."
+      div (FRAME) [1216×1046] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [16×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [16×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [16×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [16×18] bg:#c9a84c
+              Bookings & Reservations (TEXT) [187×28] bg:#fafaf8 font:Figtree/400/18.0px "Bookings & Reservations"
+            Table management, automated confirmations, and real-time availability. Never miss a booking. (TEXT) [295×46] bg:#999999 font:Figtree/400/14.0px "Table management, automated confirmations, and 
+real-time availability. Never mi"
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [16×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [16×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [16×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [16×18] bg:#c9a84c
+              Orders & Delivery (TEXT) [133×28] bg:#fafaf8 font:Figtree/400/18.0px "Orders & Delivery"
+            Online ordering, menu management, and delivery tracking. Zero commission on every order. (TEXT) [288×46] bg:#999999 font:Figtree/400/14.0px "Online ordering, menu management, and delivery 
+tracking. Zero commission on eve"
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [20×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [20×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [20×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [20×16] bg:#c9a84c
+              Payments (TEXT) [76×28] bg:#fafaf8 font:Figtree/400/18.0px "Payments"
+            Accept cards, contactless, and digital wallets. Fast payouts with transparent fees. (TEXT) [292×46] bg:#999999 font:Figtree/400/14.0px "Accept cards, contactless, and digital wallets. Fast 
+payouts with transparent f"
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [22×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [22×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [22×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [22×18] bg:#c9a84c
+              CRM & Customer Data (TEXT) [173×28] bg:#fafaf8 font:Figtree/400/18.0px "CRM & Customer Data"
+            Know your customers. Track preferences, visit history, and lifetime value in one place. (TEXT) [268×46] bg:#999999 font:Figtree/400/14.0px "Know your customers. Track preferences, visit 
+history, and lifetime value in on"
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [18×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [18×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [18×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [18×14] bg:#c9a84c
+              Email & SMS Marketing (TEXT) [176×28] bg:#fafaf8 font:Figtree/400/18.0px "Email & SMS Marketing"
+            Send targeted campaigns, loyalty rewards, and automated reminders to bring customers back. (TEXT) [273×46] bg:#999999 font:Figtree/400/14.0px "Send targeted campaigns, loyalty rewards, and 
+automated reminders to bring cust"
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [20×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [20×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [20×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [19×18] bg:#c9a84c
+              Reviews & Reputation (TEXT) [167×28] bg:#fafaf8 font:Figtree/400/18.0px "Reviews & Reputation"
+            Collect and showcase reviews. Build trust with automated review requests after every visit. (TEXT) [270×46] bg:#999999 font:Figtree/400/14.0px "Collect and showcase reviews. Build trust with 
+automated review requests after "
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [18×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [18×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [18×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [18×18] bg:#c9a84c
+              Your Branded Page (TEXT) [145×28] bg:#fafaf8 font:Figtree/400/18.0px "Your Branded Page"
+            A beautiful online presence with your branding. Bookings and orders without the middleman. (TEXT) [275×46] bg:#999999 font:Figtree/400/14.0px "A beautiful online presence with your branding. 
+Bookings and orders without the"
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [18×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [18×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [18×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [18×16] bg:#c9a84c
+              Analytics & Insights (TEXT) [149×28] bg:#fafaf8 font:Figtree/400/18.0px "Analytics & Insights"
+            Real-time reporting on revenue, customers, and performance. Make data-driven decisions. (TEXT) [279×46] bg:#999999 font:Figtree/400/14.0px "Real-time reporting on revenue, customers, and 
+performance. Make data-driven de"
+        div (FRAME) [384×328] bg:#111111 r:16.0 border:#222222
+          div (FRAME) [382×192] bg:#000000@0.0 border:#e5e7eb
+            img (FRAME) [382×382] [IMAGE] border:#e5e7eb
+          div (FRAME) [382×134] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [334×28] bg:#000000@0.0 border:#e5e7eb
+              i (FRAME) [18×28] bg:#000000@0.0 border:#e5e7eb
+                svg (FRAME) [18×18] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                  Frame (FRAME) [18×18] bg:#000000@0.0 border:#e5e7eb
+                    Vector (VECTOR) [18×18] bg:#c9a84c
+              EPOS System (TEXT) [107×28] bg:#fafaf8 font:Figtree/400/18.0px "EPOS System"
+            Full point-of-sale integration with inventory, staff management, and kitchen displays. (TEXT) [286×46] bg:#999999 font:Figtree/400/14.0px "Full point-of-sale integration with inventory, staff 
+management, and kitchen di"
+          div (FRAME) [98×24] bg:#000000@0.0 border:#e5e7eb
+            Coming Soon (TEXT) [69×16] bg:#111111 font:Figtree/400/12.0px "Coming Soon"
+  section (FRAME) [1440×1216] bg:#111111 border:#e5e7eb
+    div (FRAME) [1280×960] bg:#000000@0.0 border:#e5e7eb
+      div (FRAME) [1216×84] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [1216×20] bg:#000000@0.0 border:#e5e7eb
+          BUILT FOR YOUR BUSINESS (TEXT) [1224×17] bg:#c9a84c font:Figtree/400/14.0px "BUILT FOR YOUR BUSINESS"
+        h2 (FRAME) [1216×48] bg:#000000@0.0 border:#e5e7eb
+          Whatever you run, Reeve runs it better. (TEXT) [809×48] bg:#fafaf8 font:Figtree/400/48.0px "Whatever you run, Reeve runs it better."
+      div (FRAME) [1216×812] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [1216×796] bg:#000000@0.0 border:#e5e7eb
+          div (FRAME) [389×386] bg:#181818 r:16.0 border:#222222
+            div (FRAME) [387×224] bg:#000000@0.0 border:#e5e7eb
+              img (FRAME) [387×387] [IMAGE] border:#e5e7eb
+            div (FRAME) [387×160] bg:#000000@0.0 border:#e5e7eb
+              h3 (FRAME) [339×28] bg:#000000@0.0 border:#e5e7eb
+                Restaurants & Pubs (TEXT) [165×28] bg:#fafaf8 font:Figtree/400/20.0px "Restaurants & Pubs"
+              p (FRAME) [339×40] bg:#000000@0.0 border:#e5e7eb
+                Table bookings, online ordering, and kitchen management. (TEXT) [255×40] bg:#999999 font:Figtree/400/14.0px "Table bookings, online ordering, and kitchen 
+management."
+              div (FRAME) [339×20] bg:#000000@0.0 border:#e5e7eb
+                Learn more → (TEXT) [347×17] bg:#c9a84c font:Figtree/400/14.0px "Learn more →"
+          div (FRAME) [389×386] bg:#181818 r:16.0 border:#222222
+            div (FRAME) [387×224] bg:#000000@0.0 border:#e5e7eb
+              img (FRAME) [387×387] [IMAGE] border:#e5e7eb
+            div (FRAME) [387×160] bg:#000000@0.0 border:#e5e7eb
+              h3 (FRAME) [339×28] bg:#000000@0.0 border:#e5e7eb
+                Barbers & Salons (TEXT) [143×28] bg:#fafaf8 font:Figtree/400/20.0px "Barbers & Salons"
+              p (FRAME) [339×40] bg:#000000@0.0 border:#e5e7eb
+                Appointment scheduling, client profiles, and reminders. (TEXT) [258×40] bg:#999999 font:Figtree/400/14.0px "Appointment scheduling, client profiles, and 
+reminders."
+              div (FRAME) [339×20] bg:#000000@0.0 border:#e5e7eb
+                Learn more → (TEXT) [347×17] bg:#c9a84c font:Figtree/400/14.0px "Learn more →"
+          div (FRAME) [389×386] bg:#181818 r:16.0 border:#222222
+            div (FRAME) [387×224] bg:#000000@0.0 border:#e5e7eb
+              img (FRAME) [387×387] [IMAGE] border:#e5e7eb
+            div (FRAME) [387×160] bg:#000000@0.0 border:#e5e7eb
+              h3 (FRAME) [339×28] bg:#000000@0.0 border:#e5e7eb
+                Tutors & Services (TEXT) [148×28] bg:#fafaf8 font:Figtree/400/20.0px "Tutors & Services"
+              p (FRAME) [339×40] bg:#000000@0.0 border:#e5e7eb
+                Session bookings, payments, and student management. (TEXT) [244×40] bg:#999999 font:Figtree/400/14.0px "Session bookings, payments, and student 
+management."
+              div (FRAME) [339×20] bg:#000000@0.0 border:#e5e7eb
+                Learn more → (TEXT) [347×17] bg:#c9a84c font:Figtree/400/14.0px "Learn more →"
+          div (FRAME) [389×386] bg:#181818 r:16.0 border:#222222
+            div (FRAME) [387×224] bg:#000000@0.0 border:#e5e7eb
+              img (FRAME) [387×387] [IMAGE] border:#e5e7eb
+            div (FRAME) [387×140] bg:#000000@0.0 border:#e5e7eb
+              h3 (FRAME) [339×28] bg:#000000@0.0 border:#e5e7eb
+                Shops & Convenience (TEXT) [188×28] bg:#fafaf8 font:Figtree/400/20.0px "Shops & Convenience"
+              p (FRAME) [339×20] bg:#000000@0.0 border:#e5e7eb
+                Inventory, click & collect, and local delivery. (TEXT) [248×20] bg:#999999 font:Figtree/400/14.0px "Inventory, click & collect, and local delivery."
+              div (FRAME) [339×20] bg:#000000@0.0 border:#e5e7eb
+                Learn more → (TEXT) [347×17] bg:#c9a84c font:Figtree/400/14.0px "Learn more →"
+          div (FRAME) [389×386] bg:#181818 r:16.0 border:#222222
+            div (FRAME) [387×224] bg:#000000@0.0 border:#e5e7eb
+              img (FRAME) [387×387] [IMAGE] border:#e5e7eb
+            div (FRAME) [387×160] bg:#000000@0.0 border:#e5e7eb
+              h3 (FRAME) [339×28] bg:#000000@0.0 border:#e5e7eb
+                Cafés & Takeaways (TEXT) [163×28] bg:#fafaf8 font:Figtree/400/20.0px "Cafés & Takeaways"
+              p (FRAME) [339×40] bg:#000000@0.0 border:#e5e7eb
+                Online orders, loyalty programmes, and menu updates. (TEXT) [265×40] bg:#999999 font:Figtree/400/14.0px "Online orders, loyalty programmes, and menu 
+updates."
+              div (FRAME) [339×20] bg:#000000@0.0 border:#e5e7eb
+                Learn more → (TEXT) [347×17] bg:#c9a84c font:Figtree/400/14.0px "Learn more →"
+          div (FRAME) [389×386] bg:#181818 r:16.0 border:#222222
+            div (FRAME) [387×224] bg:#000000@0.0 border:#e5e7eb
+              img (FRAME) [387×387] [IMAGE] border:#e5e7eb
+            div (FRAME) [387×140] bg:#000000@0.0 border:#e5e7eb
+              h3 (FRAME) [339×28] bg:#000000@0.0 border:#e5e7eb
+                Health & Fitness (TEXT) [139×28] bg:#fafaf8 font:Figtree/400/20.0px "Health & Fitness"
+              p (FRAME) [339×20] bg:#000000@0.0 border:#e5e7eb
+                Class bookings, memberships, and client tracking. (TEXT) [286×20] bg:#999999 font:Figtree/400/14.0px "Class bookings, memberships, and client tracking."
+              div (FRAME) [339×20] bg:#000000@0.0 border:#e5e7eb
+                Learn more → (TEXT) [347×17] bg:#c9a84c font:Figtree/400/14.0px "Learn more →"
+  section (FRAME) [1440×756] bg:#111111 border:#e5e7eb
+    div (FRAME) [1280×500] bg:#000000@0.0 border:#e5e7eb
+      div (FRAME) [1216×84] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [1216×20] bg:#000000@0.0 border:#e5e7eb
+          SEE IT IN ACTION (TEXT) [1224×17] bg:#c9a84c font:Figtree/400/14.0px "SEE IT IN ACTION"
+        h2 (FRAME) [1216×48] bg:#000000@0.0 border:#e5e7eb
+          Your business, at a glance. (TEXT) [543×48] bg:#fafaf8 font:Figtree/400/48.0px "Your business, at a glance."
+      div (FRAME) [1216×352] bg:#000000@0.0 r:16.0 border:#e5e7eb
+        div (FRAME) [1216×32] bg:#222222 border:#e5e7eb
+          div (FRAME) [12×12] bg:#ef4444 r:9999.0 border:#e5e7eb
+          div (FRAME) [12×12] bg:#eab308 r:9999.0 border:#e5e7eb
+          div (FRAME) [12×12] bg:#22c55e r:9999.0 border:#e5e7eb
+        div (FRAME) [1216×320] bg:#111111 border:#e5e7eb
+          div (FRAME) [1216×320] bg:#000000@0.0 border:#e5e7eb
+            div (FRAME) [224×320] bg:#181818 border:#222222
+              div (FRAME) [175×272] bg:#000000@0.0 border:#e5e7eb
+                div (FRAME) [175×48] bg:#c9a84c@0.1 r:8.0 border:#c9a84c
+                  i (FRAME) [16×24] bg:#000000@0.0 border:#e5e7eb
+                    svg (FRAME) [16×16] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                      Frame (FRAME) [16×16] bg:#000000@0.0 border:#e5e7eb
+                        Vector (VECTOR) [16×14] bg:#c9a84c
+                  Dashboard (TEXT) [64×20] bg:#c9a84c font:Figtree/400/14.0px "Dashboard"
+                div (FRAME) [175×48] bg:#000000@0.0 r:8.0 border:#e5e7eb
+                  i (FRAME) [14×24] bg:#000000@0.0 border:#e5e7eb
+                    svg (FRAME) [14×16] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                      Frame (FRAME) [14×16] bg:#000000@0.0 border:#e5e7eb
+                        Vector (VECTOR) [14×16] bg:#999999
+                  Bookings (TEXT) [54×20] bg:#fafaf8 font:Figtree/400/14.0px "Bookings"
+                div (FRAME) [175×48] bg:#000000@0.0 r:8.0 border:#e5e7eb
+                  i (FRAME) [14×24] bg:#000000@0.0 border:#e5e7eb
+                    svg (FRAME) [14×16] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                      Frame (FRAME) [14×16] bg:#000000@0.0 border:#e5e7eb
+                        Vector (VECTOR) [14×16] bg:#999999
+                  Orders (TEXT) [41×20] bg:#fafaf8 font:Figtree/400/14.0px "Orders"
+                div (FRAME) [175×48] bg:#000000@0.0 r:8.0 border:#e5e7eb
+                  i (FRAME) [20×24] bg:#000000@0.0 border:#e5e7eb
+                    svg (FRAME) [20×16] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                      Frame (FRAME) [20×16] bg:#000000@0.0 border:#e5e7eb
+                        Vector (VECTOR) [20×16] bg:#999999
+                  Customers (TEXT) [65×20] bg:#fafaf8 font:Figtree/400/14.0px "Customers"
+                div (FRAME) [175×48] bg:#000000@0.0 r:8.0 border:#e5e7eb
+                  i (FRAME) [16×24] bg:#000000@0.0 border:#e5e7eb
+                    svg (FRAME) [16×16] flex:HORIZONTAL gap:0 pad:0/0/0/0
+                      Frame (FRAME) [16×16] bg:#000000@0.0 border:#e5e7eb
+                        Vector (VECTOR) [16×12] bg:#999999
+                  Marketing (TEXT) [59×20] bg:#fafaf8 font:Figtree/400/14.0px "Marketing"
+            div (FRAME) [992×320] bg:#000000@0.0 border:#e5e7eb
+              h3 (FRAME) [928×32] bg:#000000@0.0 border:#e5e7eb
+                Good evening, Sadkine (TEXT) [237×32] bg:#fafaf8 font:Figtree/400/24.0px "Good evening, Sadkine"
+              div (FRAME) [928×106] bg:#000000@0.0 border:#e5e7eb
+                div (FRAME) [220×106] bg:#181818 r:12.0 border:#222222
+                  div (FRAME) [186×16] bg:#000000@0.0 border:#e5e7eb
+                    Today's Revenue (TEXT) [194×15] bg:#999999 font:Figtree/400/12.0px "Today's Revenue"
+                  div (FRAME) [214×32] bg:#000000@0.0 border:#e5e7eb
+                    £1,847 (TEXT) [222×29] bg:#c9a84c font:Figtree/400/24.0px "£1,847"
+                  div (FRAME) [186×16] bg:#000000@0.0 border:#e5e7eb
+                    +12% vs yesterday (TEXT) [194×15] bg:#22c55e font:Figtree/400/12.0px "+12% vs yesterday"
+                div (FRAME) [220×106] bg:#181818 r:12.0 border:#222222
+                  div (FRAME) [186×16] bg:#000000@0.0 border:#e5e7eb
+                    Covers (TEXT) [194×15] bg:#999999 font:Figtree/400/12.0px "Covers"
+                  div (FRAME) [214×32] bg:#000000@0.0 border:#e5e7eb
+                    94 (TEXT) [222×29] bg:#fafaf8 font:Figtree/400/24.0px "94"
+                  div (FRAME) [186×16] bg:#000000@0.0 border:#e5e7eb
+                    +8% vs yesterday (TEXT) [194×15] bg:#22c55e font:Figtree/400/12.0px "+8% vs yesterday"
+                div (FRAME) [220×106] bg:#181818 r:12.0 border:#222222
+                  div (FRAME) [186×1] bg:#000000@0.0 border:#e5e7eb
+  nav (FRAME) [1440×80] bg:#000000@0.0 border:#e5e7eb
+    div (FRAME) [1280×80] bg:#000000@0.0 border:#e5e7eb
+      div (FRAME) [158×48] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [48×48] bg:#c9a84c r:12.0 border:#e5e7eb
+          R (TEXT) [16×32] bg:#111111 font:Figtree/400/24.0px "R"
+        ReeveOS (TEXT) [96×32] bg:#fafaf8 font:Figtree/400/24.0px "ReeveOS"
+      div (FRAME) [355×40] bg:#000000@0.0 border:#e5e7eb
+        div (FRAME) [55×20] bg:#000000@0.0 border:#e5e7eb
+          Features (TEXT) [63×17] bg:#fafaf8 font:Figtree/400/14.0px "Features"
+        div (FRAME) [43×20] bg:#000000@0.0 border:#e5e7eb
+          Pricing (TEXT) [51×17] bg:#fafaf8 font:Figtree/400/14.0px "Pricing"
+        div (FRAME) [38×20] bg:#000000@0.0 border:#e5e7eb
+          Log in (TEXT) [46×17] bg:#fafaf8 font:Figtree/400/14.0px "Log in"
+        div (FRAME) [123×40] bg:#c9a84c r:9999.0 border:#e5e7eb
+          Get Started (TEXT) [131×17] bg:#111111 font:Figtree/400/14.0px "Get Started"
