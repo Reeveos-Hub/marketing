@@ -32,6 +32,16 @@ const WORDS = [
 
 const F = 'Figtree, system-ui, sans-serif'
 
+const HERO_IMAGES = [
+  'https://images.pexels.com/photos/2506993/pexels-photo-2506993.jpeg?w=1440&q=80',
+  'https://images.pexels.com/photos/6205600/pexels-photo-6205600.jpeg?w=1440&q=80',
+  'https://images.pexels.com/photos/36137710/pexels-photo-36137710.jpeg?w=1440&q=80',
+  'https://images.pexels.com/photos/1563678/pexels-photo-1563678.jpeg?w=1440&q=80',
+  'https://images.pexels.com/photos/5858201/pexels-photo-5858201.jpeg?w=1440&q=80',
+  'https://images.pexels.com/photos/12115040/pexels-photo-12115040.jpeg?w=1440&q=80',
+  'https://images.pexels.com/photos/3998405/pexels-photo-3998405.jpeg?w=1440&q=80',
+]
+
 /* ═══════════════ NAV ═══════════════ */
 function Nav() {
   const [s, setS] = useState(false)
@@ -64,12 +74,34 @@ function Nav() {
 /* ═══════════════ HERO — 1440×728 ═══════════════ */
 function Hero() {
   const [wi, setWi] = useState(0)
+  const [hi, setHi] = useState(() => Math.floor(Math.random() * HERO_IMAGES.length))
   useEffect(() => { const t = setInterval(() => setWi(i => (i+1) % WORDS.length), 2500); return () => clearInterval(t) }, [])
+  useEffect(() => {
+    const t = setInterval(() => {
+      setHi(prev => {
+        let next = Math.floor(Math.random() * HERO_IMAGES.length)
+        while (next === prev) next = Math.floor(Math.random() * HERO_IMAGES.length)
+        return next
+      })
+    }, 5000)
+    return () => clearInterval(t)
+  }, [])
 
   return (
     <section className="relative w-full" style={{height:728,background:'#111'}}>
-      <div className="absolute inset-0">
-        <img src={IMG.hero} alt="" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 overflow-hidden">
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={hi}
+            src={HERO_IMAGES[hi]}
+            alt=""
+            className="absolute w-full h-full object-cover"
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            exit={{opacity:0}}
+            transition={{duration:1.2}}
+          />
+        </AnimatePresence>
         <div className="absolute inset-0" style={{background:'linear-gradient(to right, #111111 0%, rgba(17,17,17,0.8) 40%, transparent 70%)'}} />
       </div>
       <div className="relative max-w-[1280px] mx-auto px-8 h-full flex items-center">
