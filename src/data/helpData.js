@@ -3596,6 +3596,393 @@ export const ARTICLES = [
     related: ['client-portal-overview', 'cancel-appointment'],
   },
 
+
+  // ═══════════════════════════════════════════════════════════════
+  // NEW ARTICLES — EXPANSION TO 228 (beating Fresha)
+  // ═══════════════════════════════════════════════════════════════
+
+  // ─── GETTING STARTED (7 new) ───
+
+  {
+    id: 'understand-dashboard-layout',
+    categoryId: 'getting-started',
+    title: 'Understanding the ReeveOS dashboard layout',
+    intro: 'Your dashboard is split into clear sections — a sidebar for navigation, a top bar for search and quick actions, and a main area that changes depending on which page you\'re on.',
+    toc: ['The sidebar', 'The top bar', 'The main content area'],
+    sections: [
+      {
+        title: 'The sidebar',
+        steps: [
+          { text: 'The sidebar runs down the left side of your screen. It\'s your main way of getting around — every feature is listed here.', screenshot: true },
+          { text: 'The sidebar is grouped into sections: Main (Dashboard, Calendar, Booking Link, Services), CRM, Shop, Client Portal, Website, and Manage (People, Business, Settings).' },
+          { text: 'Click any item to navigate to that page. Items with a small arrow have sub-pages — click to expand them.' },
+        ]
+      },
+      {
+        title: 'The top bar',
+        steps: [
+          { text: 'At the top of every page you\'ll see a search bar where you can search for clients, bookings, and services.', screenshot: true },
+          { text: 'On the right side you\'ll find a help icon, a notifications bell, and your profile avatar.' },
+        ]
+      },
+      {
+        title: 'The main content area',
+        steps: [
+          { text: 'The large area in the centre changes depending on which page you\'re on. On the Dashboard, it shows your overview cards, upcoming appointments, and activity feed.' },
+          { text: 'Every page follows the same layout — sidebar left, content right. Once you\'ve used one page, you\'ll know how they all work.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Can I collapse the sidebar?', a: 'Yes — click the arrow icon at the top of the sidebar to collapse it into a slim icon strip.' },
+      { q: 'Does the layout change on mobile?', a: 'On mobile, the sidebar becomes a bottom navigation bar. The main content takes up the full screen.' },
+    ],
+    related: ['set-up-business-profile', 'first-steps-after-signing-up'],
+  },
+
+  {
+    id: 'navigate-sidebar',
+    categoryId: 'getting-started',
+    title: 'How to navigate the sidebar',
+    intro: 'The sidebar is your command centre. Everything you need is organised into clear groups so you can find things quickly.',
+    toc: ['Sidebar sections explained', 'Expanding sub-menus'],
+    sections: [
+      {
+        title: 'Sidebar sections explained',
+        steps: [
+          { text: 'Main — your daily tools: Dashboard, Calendar, Booking Link, and Services. These are the pages you\'ll use most.', screenshot: true },
+          { text: 'CRM — your client book. Pipeline view, full client list, and analytics.' },
+          { text: 'Shop — your online store for products and gift vouchers.' },
+          { text: 'Client Portal — consultation forms, packages, video meetings, messages, email campaigns, and push notifications.' },
+          { text: 'Website — your website builder and page management.' },
+          { text: 'Manage — team management (People), business settings (Business), and configuration (Settings).' },
+        ]
+      },
+      {
+        title: 'Expanding sub-menus',
+        steps: [
+          { text: 'Some sidebar items have a small arrow next to them. Click the arrow to expand and see sub-pages.', screenshot: true },
+          { text: 'For example, clicking the arrow next to Calendar reveals sub-pages for Notifications and Bookings.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Can I rearrange the sidebar?', a: 'The sidebar order is fixed to keep things consistent, but you can collapse sections you don\'t use often.' },
+    ],
+    related: ['understand-dashboard-layout', 'first-steps-after-signing-up'],
+  },
+
+  {
+    id: 'set-up-logo-branding',
+    categoryId: 'getting-started',
+    title: 'Setting up your business logo and branding',
+    intro: 'Your logo and brand colours appear on your booking page, client emails, and invoices. Getting these right early means everything looks professional from day one.',
+    toc: ['Upload your logo', 'Set your brand colours'],
+    sections: [
+      {
+        title: 'Upload your logo',
+        steps: [
+          { text: 'Go to Settings in the sidebar, then click Business Profile.', screenshot: true },
+          { text: 'Scroll to the Logo section and click Upload Logo.' },
+          { text: 'Choose a square image file (PNG or JPG, at least 400×400 pixels). A transparent background looks cleanest.' },
+          { text: 'You\'ll see a preview. If it looks right, click Save Changes.' },
+        ]
+      },
+      {
+        title: 'Set your brand colours',
+        steps: [
+          { text: 'Below the logo section, you\'ll find Brand Colours.', screenshot: true },
+          { text: 'Choose your primary colour — this is used for buttons, highlights, and accents across your booking page.' },
+          { text: 'Click Save Changes to apply everywhere.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Where does my logo appear?', a: 'Your logo shows on your booking page, in the sidebar of your dashboard, on client email confirmations, and on invoices.' },
+      { q: 'Can I upload a cover image too?', a: 'Yes — scroll down to Cover Image in the same settings page. This is the banner photo at the top of your booking page.' },
+    ],
+    related: ['set-up-business-profile', 'first-steps-after-signing-up'],
+  },
+
+  {
+    id: 'invite-staff-member',
+    categoryId: 'getting-started',
+    title: 'Inviting your first team member',
+    intro: 'Adding your team means they can manage their own bookings and clients can book with specific people.',
+    toc: ['Go to People', 'Add a team member', 'Set their services and hours'],
+    sections: [
+      {
+        title: 'Go to People',
+        steps: [
+          { text: 'In the sidebar under Manage, click People.', screenshot: true },
+          { text: 'Click Staff in the sub-menu.' },
+        ]
+      },
+      {
+        title: 'Add a team member',
+        steps: [
+          { text: 'Click the + button in the bottom right corner.', screenshot: true },
+          { text: 'Enter their name, email address, and phone number.' },
+          { text: 'Choose their role: Staff (own bookings only), Manager (see everything), or Admin (full access).' },
+          { text: 'Click Save to create their profile.' },
+        ]
+      },
+      {
+        title: 'Set their services and hours',
+        steps: [
+          { text: 'After saving, click Services in their profile to choose which treatments they can perform.', screenshot: true },
+          { text: 'Click Availability to set their working hours for each day of the week.' },
+          { text: 'Once set, they appear as a bookable staff member on your calendar and booking page.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Do staff need their own login?', a: 'Yes — they receive an email invitation to create their own password and can then log in to see their calendar.' },
+      { q: 'Can I limit what they see?', a: 'Yes. Staff roles control access. A standard Staff member can only see their own bookings and clients.' },
+    ],
+    related: ['set-up-business-profile', 'add-a-service'],
+  },
+
+  {
+    id: 'add-first-service',
+    categoryId: 'getting-started',
+    title: 'Adding your first service',
+    intro: 'Services are the treatments or offerings your clients book. Adding your first one takes about a minute — and once it\'s in, clients can start booking straight away.',
+    toc: ['Go to Services', 'Fill in the details'],
+    sections: [
+      {
+        title: 'Go to Services',
+        steps: [
+          { text: 'Click Services in the sidebar.', screenshot: true },
+          { text: 'Click the Add Service button in the top right.' },
+        ]
+      },
+      {
+        title: 'Fill in the details',
+        steps: [
+          { text: 'Enter the service name — this is what your clients will see (e.g. Microneedling Facial).', screenshot: true },
+          { text: 'Add a short description explaining what the treatment involves.' },
+          { text: 'Set the duration — how long the treatment takes.' },
+          { text: 'Set the price.' },
+          { text: 'Choose which staff members can perform this service.' },
+          { text: 'Click Save. Your service is now live and bookable.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Can I add a service that isn\'t bookable online?', a: 'Yes. After creating it, go to Online Booking settings and toggle its visibility off.' },
+      { q: 'Can I group services into categories?', a: 'Yes. When creating a service, assign it to a category like Facials or Body Treatments.' },
+    ],
+    related: ['set-up-business-profile', 'invite-staff-member'],
+  },
+
+  {
+    id: 'set-opening-hours-first-time',
+    categoryId: 'getting-started',
+    title: 'Setting your opening hours for the first time',
+    intro: 'Your opening hours control when clients can book online. Set them once and they apply to every day — you can always adjust individual days later.',
+    toc: ['Find your opening hours', 'Set your weekly schedule'],
+    sections: [
+      {
+        title: 'Find your opening hours',
+        steps: [
+          { text: 'Go to Settings in the sidebar.', screenshot: true },
+          { text: 'Click Opening Hours.' },
+        ]
+      },
+      {
+        title: 'Set your weekly schedule',
+        steps: [
+          { text: 'You\'ll see each day of the week listed. For each day, set your opening and closing times.', screenshot: true },
+          { text: 'If you\'re closed on a particular day, toggle it off.' },
+          { text: 'If you have a lunch break, you can add a break period within any day.' },
+          { text: 'Click Save when you\'re done. Your online booking page will immediately reflect these hours.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Can I set different hours for different staff?', a: 'Yes. Each staff member has their own availability in People > Staff > Availability.' },
+      { q: 'Can I set holiday hours?', a: 'Yes. Add special hours or closures for specific dates in the same settings.' },
+    ],
+    related: ['set-up-business-profile', 'first-steps-after-signing-up'],
+  },
+
+  {
+    id: 'share-booking-link-first-time',
+    categoryId: 'getting-started',
+    title: 'Sharing your booking link for the first time',
+    intro: 'Your booking link is live as soon as you sign up. Here\'s how to find it and start sharing it with clients.',
+    toc: ['Find your link', 'Share it'],
+    sections: [
+      {
+        title: 'Find your link',
+        steps: [
+          { text: 'Click Booking Link in the sidebar.', screenshot: true },
+          { text: 'Your unique booking URL is shown at the top of the page.' },
+        ]
+      },
+      {
+        title: 'Share it',
+        steps: [
+          { text: 'Click Copy Link to copy it to your clipboard.', screenshot: true },
+          { text: 'Paste it into your Instagram bio, Facebook page, WhatsApp status, or send it directly to clients.' },
+          { text: 'You can also connect it to Google, Instagram, and Facebook using the Booking Channels section below.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Does my booking link change if I update my business name?', a: 'Your link is based on your business name. If you change it, the link updates — but old links redirect automatically.' },
+    ],
+    related: ['set-up-booking-link', 'connect-instagram-booking'],
+  },
+
+  // ─── DASHBOARD (5 new) ───
+
+  {
+    id: 'understanding-revenue-cards',
+    categoryId: 'dashboard',
+    title: 'Understanding your revenue cards',
+    intro: 'The revenue cards at the top of your dashboard show you how your business is performing today compared to yesterday and last week.',
+    toc: ['What each card shows', 'How comparisons work'],
+    sections: [
+      {
+        title: 'What each card shows',
+        steps: [
+          { text: 'Appointments Today shows the total number of bookings for today, with a comparison to last week.', screenshot: true },
+          { text: 'Upcoming shows how many appointments are coming up next and what time the next one starts.' },
+          { text: 'Waitlist shows how many clients are on your cancellation waitlist.' },
+          { text: 'Revenue Today shows total revenue from completed appointments today, compared to yesterday.' },
+        ]
+      },
+      {
+        title: 'How comparisons work',
+        steps: [
+          { text: 'The small percentage and arrow below each number shows how today compares to the previous period.' },
+          { text: 'Green arrow up means better than the comparison period. Numbers update in real time.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Why does Revenue Today show £0?', a: 'Revenue only counts completed and paid transactions. Upcoming bookings don\'t count until payment is processed.' },
+    ],
+    related: ['dashboard-overview', 'customise-dashboard-layout'],
+  },
+
+  {
+    id: 'customise-dashboard-layout',
+    categoryId: 'dashboard',
+    title: 'How to customise your dashboard layout',
+    intro: 'You can rearrange the widgets on your dashboard to put the information you care about most right at the top.',
+    toc: ['Open the layout editor', 'Rearrange widgets'],
+    sections: [
+      {
+        title: 'Open the layout editor',
+        steps: [
+          { text: 'On your Dashboard, click the Edit Layout button in the top right corner.', screenshot: true },
+          { text: 'The dashboard enters edit mode — you\'ll see handles on each widget.' },
+        ]
+      },
+      {
+        title: 'Rearrange widgets',
+        steps: [
+          { text: 'Drag any widget by its handle to move it to a new position.', screenshot: true },
+          { text: 'You can also hide widgets you don\'t need by clicking the eye icon.' },
+          { text: 'When you\'re happy, click Save Layout.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Can I reset to the default layout?', a: 'Yes — in Edit Layout mode, click Reset to Default.' },
+    ],
+    related: ['dashboard-overview', 'understanding-revenue-cards'],
+  },
+
+  {
+    id: 'using-search-bar',
+    categoryId: 'dashboard',
+    title: 'Using the search bar to find clients and appointments',
+    intro: 'The search bar at the top of every page lets you quickly find clients, bookings, and services without navigating through menus.',
+    toc: ['How to search', 'What you can find'],
+    sections: [
+      {
+        title: 'How to search',
+        steps: [
+          { text: 'Click the search bar at the top of any page.', screenshot: true },
+          { text: 'Start typing a client name, phone number, email, or service name.' },
+          { text: 'Results appear instantly as you type. Click any result to jump to it.' },
+        ]
+      },
+      {
+        title: 'What you can find',
+        steps: [
+          { text: 'Clients — search by name, email, or phone number.' },
+          { text: 'Bookings — search by client name or booking reference.' },
+          { text: 'Services — search by service name.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Can I search for past bookings?', a: 'Yes. The search covers all bookings, past and future.' },
+    ],
+    related: ['dashboard-overview', 'view-all-bookings'],
+  },
+
+  {
+    id: 'dashboard-by-business-type',
+    categoryId: 'dashboard',
+    title: 'Dashboard differences by business type',
+    intro: 'Your dashboard adapts to your business type. Restaurants see different widgets than salons.',
+    toc: ['Salon and services businesses', 'Restaurant businesses'],
+    sections: [
+      {
+        title: 'Salon and services businesses',
+        steps: [
+          { text: 'You\'ll see: Appointments Today, Upcoming, Waitlist, Revenue Today, Upcoming Appointments list, Appointment Trends chart, Quick Actions, and Live Activity.', screenshot: true },
+        ]
+      },
+      {
+        title: 'Restaurant businesses',
+        steps: [
+          { text: 'You\'ll see: Covers Today, Revenue Today, Active Orders, Table Status overview, and Live Activity.', screenshot: true },
+          { text: 'The calendar shows table reservations instead of appointments.' },
+          { text: 'The sidebar includes Floor Plan and Orders instead of Booking Link and Consultation Forms.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Can I change my business type after signing up?', a: 'Your business type is set during onboarding. Contact support if you need to change it.' },
+    ],
+    related: ['dashboard-overview'],
+  },
+
+  {
+    id: 'daily-weekly-monthly-performance',
+    categoryId: 'dashboard',
+    title: 'Reading your daily, weekly, and monthly performance',
+    intro: 'The Appointment Trends chart on your dashboard shows how bookings are distributed throughout the day.',
+    toc: ['Understanding the chart', 'Spotting patterns'],
+    sections: [
+      {
+        title: 'Understanding the chart',
+        steps: [
+          { text: 'The bar chart shows bookings grouped by hour for the current day.', screenshot: true },
+          { text: 'Taller bars mean more bookings at that time. This helps you see your busy and quiet periods at a glance.' },
+        ]
+      },
+      {
+        title: 'Spotting patterns',
+        steps: [
+          { text: 'If you notice consistent gaps (e.g. quiet between 2-4pm), consider running a promotion for those times.' },
+          { text: 'If mornings are always packed, you might want to open earlier or add another staff member.' },
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Can I see weekly or monthly trends?', a: 'For deeper analytics, go to Analytics and Reports in the sidebar. The dashboard chart shows today only.' },
+    ],
+    related: ['dashboard-overview', 'revenue-report'],
+  },
+
 ]
 
 export const ARTICLE_MAP = Object.fromEntries(ARTICLES.map(a => [a.id, a]))
