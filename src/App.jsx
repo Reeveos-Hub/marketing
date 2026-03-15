@@ -1,8 +1,17 @@
+import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
-// ─── IMAGES (Unsplash — matching Figma photography) ───
+// Help centre pages
+import HelpHome       from './pages/help-centre/HelpHome'
+import KnowledgeBase  from './pages/help-centre/KnowledgeBase'
+import CategoryPage   from './pages/help-centre/CategoryPage'
+import ArticlePage    from './pages/help-centre/ArticlePage'
+import SearchResults  from './pages/help-centre/SearchResults'
+import Academy        from './pages/help-centre/Academy'
+
+// ─── IMAGES ───
 const IMG = {
   hero: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1440&q=80',
   bookings: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80',
@@ -54,14 +63,12 @@ function Nav() {
     return () => window.removeEventListener('scroll', h)
   }, [])
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     const h = () => { if (window.innerWidth >= 768) setMobileOpen(false) }
     window.addEventListener('resize', h)
     return () => window.removeEventListener('resize', h)
   }, [])
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -76,7 +83,6 @@ function Nav() {
       }}
     >
       <div className="max-w-[1280px] mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
-        {/* Logo */}
         <div className="flex items-center gap-2.5 md:gap-3">
           <div className="w-10 h-10 md:w-12 md:h-12 bg-[#C9A84C] rounded-xl flex items-center justify-center">
             <span className="text-[#111] font-bold text-xl md:text-2xl" style={{ fontFamily: F }}>R</span>
@@ -84,15 +90,14 @@ function Nav() {
           <span className="text-[#FAFAF8] font-bold text-xl md:text-2xl" style={{ fontFamily: F }}>ReeveOS</span>
         </div>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-[#FAFAF8] text-sm hover:text-[#C9A84C] transition-colors" style={{ fontFamily: F }}>Features</a>
           <a href="#pricing" className="text-[#FAFAF8] text-sm hover:text-[#C9A84C] transition-colors" style={{ fontFamily: F }}>Pricing</a>
+          <a href="/help-centre" className="text-[#FAFAF8] text-sm hover:text-[#C9A84C] transition-colors" style={{ fontFamily: F }}>Help Centre</a>
           <a href="#" className="text-[#FAFAF8] text-sm hover:text-[#C9A84C] transition-colors" style={{ fontFamily: F }}>Log in</a>
           <a href="#" className="bg-[#C9A84C] text-[#111] text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-[#d4b55e] transition-colors" style={{ fontFamily: F }}>Get Started</a>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           className="md:hidden text-[#FAFAF8] p-2 -mr-2"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -102,7 +107,6 @@ function Nav() {
         </button>
       </div>
 
-      {/* Mobile menu panel */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -116,6 +120,7 @@ function Nav() {
             <div className="flex flex-col px-5 pb-6 pt-2 gap-1">
               <a href="#features" onClick={() => setMobileOpen(false)} className="text-[#FAFAF8] text-base py-3 border-b border-[#222] hover:text-[#C9A84C] transition-colors" style={{ fontFamily: F }}>Features</a>
               <a href="#pricing" onClick={() => setMobileOpen(false)} className="text-[#FAFAF8] text-base py-3 border-b border-[#222] hover:text-[#C9A84C] transition-colors" style={{ fontFamily: F }}>Pricing</a>
+              <a href="/help-centre" onClick={() => setMobileOpen(false)} className="text-[#FAFAF8] text-base py-3 border-b border-[#222] hover:text-[#C9A84C] transition-colors" style={{ fontFamily: F }}>Help Centre</a>
               <a href="#" onClick={() => setMobileOpen(false)} className="text-[#FAFAF8] text-base py-3 border-b border-[#222] hover:text-[#C9A84C] transition-colors" style={{ fontFamily: F }}>Log in</a>
               <a href="#" onClick={() => setMobileOpen(false)} className="bg-[#C9A84C] text-[#111] text-base font-semibold px-6 py-3 rounded-full hover:bg-[#d4b55e] transition-colors text-center mt-3" style={{ fontFamily: F }}>Get Started</a>
             </div>
@@ -157,52 +162,34 @@ function Hero() {
             transition={{ duration: 1.2 }}
           />
         </AnimatePresence>
-        {/* Mobile gradient: top-to-bottom so text over image is readable */}
-        <div className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(to bottom, #111111 0%, rgba(17,17,17,0.85) 30%, rgba(17,17,17,0.5) 100%)' }} />
-        {/* Desktop gradient: left-to-right as original */}
-        <div className="absolute inset-0 hidden md:block" style={{ background: 'linear-gradient(to right, #111111 0%, rgba(17,17,17,0.8) 40%, transparent 70%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(17,17,17,0.7) 0%, rgba(17,17,17,0.5) 50%, rgba(17,17,17,0.8) 100%)' }} />
       </div>
-      <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 h-full flex items-center pt-24 pb-12 md:pt-0 md:pb-0">
-        <div className="max-w-full md:max-w-[576px]">
-          <h1
-            className="text-[#FAFAF8] mb-4 md:mb-6"
-            style={{ fontFamily: F, fontWeight: 800, fontSize: 'clamp(34px, 8vw, 64px)', lineHeight: 1.05, letterSpacing: '-0.035em' }}
-          >
-            Run your{' '}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-5 md:px-8 pt-20 pb-12 md:pt-24 md:pb-16 text-center">
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <p className="text-xs md:text-sm mb-4 md:mb-5" style={{ fontFamily: F, fontWeight: 600, color: '#C9A84C', textTransform: 'uppercase', letterSpacing: '0.15em' }}>The all-in-one platform for UK high street businesses</p>
+          <h1 className="text-3xl md:text-5xl lg:text-[64px] mb-4 md:mb-6" style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.05 }}>
+            Built for your<br />
             <AnimatePresence mode="wait">
               <motion.span
                 key={wi}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.3 }}
                 style={{ color: WORDS[wi].color, display: 'inline-block' }}
               >
                 {WORDS[wi].word}
               </motion.span>
             </AnimatePresence>
-            <br />without the middleman.
           </h1>
-          <p className="text-[#FAFAF8] text-base md:text-xl leading-relaxed mb-6 md:mb-8 max-w-[576px]" style={{ fontFamily: F, fontWeight: 400 }}>
-            Bookings, orders, payments, CRM, and marketing — one system. You keep 100% of the revenue.
+          <p className="text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto" style={{ fontFamily: F, color: 'rgba(250,250,248,0.8)', lineHeight: 1.6 }}>
+            Zero commission. Real tools. Everything you need to run and grow your business — bookings, payments, CRM, and more.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-            <a
-              href="#"
-              className="bg-[#C9A84C] text-[#111] font-semibold text-base rounded-xl hover:bg-[#d4b55e] transition-colors text-center"
-              style={{ fontFamily: F, padding: '16px 28px' }}
-            >
-              Get Started Free →
-            </a>
-            <a
-              href="#"
-              className="text-[#FAFAF8] font-semibold text-base rounded-xl hover:bg-white/10 transition-colors text-center"
-              style={{ fontFamily: F, padding: '16px 28px', border: '1px solid #FAFAF8' }}
-            >
-              Book a Demo
-            </a>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#" className="bg-[#C9A84C] text-[#111] font-semibold px-8 py-3.5 rounded-full hover:bg-[#d4b55e] transition-colors text-base" style={{ fontFamily: F }}>Start for free</a>
+            <a href="/help-centre" className="border border-[rgba(250,250,248,0.3)] text-[#FAFAF8] font-semibold px-8 py-3.5 rounded-full hover:bg-[rgba(255,255,255,0.1)] transition-colors text-base" style={{ fontFamily: F }}>See how it works</a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
@@ -210,23 +197,20 @@ function Hero() {
 
 /* ═══════════════ STATS ═══════════════ */
 function Stats() {
-  const d = [
-    { v: '0%', l: 'Commission' },
-    { v: '100%', l: 'Your Revenue' },
-    { v: '£0', l: 'To Start' },
-    { v: '24/7', l: 'Support' },
+  const s = [
+    { v: '£0', l: 'Commission on bookings' },
+    { v: '0.3%', l: 'Debit card processing' },
+    { v: '20+', l: 'Business types supported' },
+    { v: '24/7', l: 'Online booking, always on' },
   ]
   return (
-    <section className="w-full py-8 md:py-12" style={{ background: '#111', borderTop: '1px solid #222', borderBottom: '1px solid #222' }}>
+    <section className="w-full py-10 md:py-14" style={{ background: '#111', borderTop: '1px solid #222' }}>
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
-        <p className="text-center text-sm md:text-base mb-6 md:mb-8" style={{ fontFamily: F, color: '#999' }}>
-          Built for independent businesses across the UK
-        </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          {d.map(s => (
-            <div key={s.l} className="text-center">
-              <div className="text-3xl md:text-[48px] mb-2" style={{ fontFamily: F, fontWeight: 800, color: '#C9A84C' }}>{s.v}</div>
-              <div className="text-sm md:text-base" style={{ fontFamily: F, color: '#999' }}>{s.l}</div>
+          {s.map(x => (
+            <div key={x.l} className="text-center">
+              <p className="text-3xl md:text-4xl mb-1.5" style={{ fontFamily: F, fontWeight: 800, color: '#C9A84C' }}>{x.v}</p>
+              <p className="text-xs md:text-sm" style={{ fontFamily: F, color: '#999' }}>{x.l}</p>
             </div>
           ))}
         </div>
@@ -235,35 +219,30 @@ function Stats() {
   )
 }
 
-/* ═══════════════ THE PROBLEM ═══════════════ */
+/* ═══════════════ PROBLEM ═══════════════ */
 function Problem() {
-  const c = [
-    { n: 'Deliveroo', p: '35%', col: '#00ccbc', bw: '35%' },
-    { n: 'UberEats', p: '30%', col: '#06c167', bw: '30%' },
-    { n: 'Just Eat', p: '14%+', col: '#ff4c00', bw: '14%' },
-    { n: 'ReeveOS', p: '0%', col: '#C9A84C', bw: '0%', hl: true },
+  const p = [
+    { h: 'They take a cut of every booking', b: 'Fresha, Treatwell, and the rest charge 20–30% on top of your price. ReeveOS charges a flat monthly fee. That\'s it.' },
+    { h: 'They own your client relationships', b: 'When you\'re on a marketplace, the platform owns the customer. With ReeveOS, your clients are yours — with your branding, your data, your control.' },
+    { h: 'They make you dependent on them', b: 'Switch platforms and you lose everything. ReeveOS gives you your own website, your own booking system, your own data. You\'re never locked in.' },
   ]
   return (
     <section className="w-full py-12 md:py-20" style={{ background: '#111' }}>
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         <div className="text-center mb-8 md:mb-12">
           <p className="text-xs md:text-sm mb-4" style={{ fontFamily: F, fontWeight: 600, color: '#C9A84C', textTransform: 'uppercase', letterSpacing: '0.15em' }}>THE PROBLEM</p>
-          <h2
-            className="text-2xl md:text-4xl lg:text-[48px]"
-            style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.1 }}
-          >
-            You're funding Silicon Valley with every order.
+          <h2 className="text-2xl md:text-4xl lg:text-[48px]" style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.1 }}>
+            Other platforms work for themselves, not for you.
           </h2>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
-          {c.map(x => (
-            <div key={x.n} className="rounded-2xl p-4 md:p-6 lg:p-8" style={{ background: '#181818', border: x.hl ? '1px solid #C9A84C' : '1px solid #222' }}>
-              <p className="text-sm md:text-xl mb-1 md:mb-3" style={{ fontFamily: F, fontWeight: 500, color: '#FAFAF8' }}>{x.n}</p>
-              <p className="text-3xl md:text-5xl lg:text-[60px] mb-1 md:mb-3" style={{ fontFamily: F, fontWeight: 800, color: x.col }}>{x.p}</p>
-              <p className="text-xs md:text-sm mb-3 md:mb-4" style={{ fontFamily: F, color: '#999' }}>per order</p>
-              <div style={{ width: '100%', height: 6, background: '#222', borderRadius: 9999, overflow: 'hidden' }}>
-                <div style={{ width: x.bw, height: '100%', background: x.col, borderRadius: 9999 }} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {p.map(x => (
+            <div key={x.h} className="rounded-2xl p-6 md:p-8" style={{ background: '#181818', border: '1px solid #222' }}>
+              <div className="w-8 h-8 mb-4 rounded-lg flex items-center justify-center" style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.2)' }}>
+                <span style={{ color: '#C9A84C', fontSize: 16 }}>✕</span>
               </div>
+              <h3 className="text-lg mb-3" style={{ fontFamily: F, fontWeight: 700, color: '#FAFAF8' }}>{x.h}</h3>
+              <p className="text-sm leading-relaxed" style={{ fontFamily: F, color: '#999' }}>{x.b}</p>
             </div>
           ))}
         </div>
@@ -275,52 +254,33 @@ function Problem() {
 /* ═══════════════ FEATURES ═══════════════ */
 function Features() {
   const f = [
-    { t: 'Bookings & Reservations', d: 'Table management, automated confirmations, and real-time availability. Never miss a booking.', i: IMG.bookings },
-    { t: 'Orders & Delivery', d: 'Online ordering, menu management, and delivery tracking. Zero commission on every order.', i: IMG.orders },
-    { t: 'Payments', d: 'Accept cards, contactless, and digital wallets. Fast payouts with transparent fees.', i: IMG.payments },
-    { t: 'CRM & Customer Data', d: 'Know your customers. Track preferences, visit history, and lifetime value in one place.', i: IMG.crm },
-    { t: 'Email & SMS Marketing', d: 'Send targeted campaigns, loyalty rewards, and automated reminders to bring customers back.', i: IMG.marketing },
-    { t: 'Reviews & Reputation', d: 'Collect and showcase reviews. Build trust with automated review requests after every visit.', i: IMG.reviews },
-    { t: 'Your Branded Page', d: 'A beautiful online presence with your branding. Bookings and orders without the middleman.', i: IMG.branded },
-    { t: 'Analytics & Insights', d: 'Real-time reporting on revenue, customers, and performance. Make data-driven decisions.', i: IMG.analytics },
-    { t: 'EPOS System', d: 'Full point-of-sale integration with inventory, staff management, and kitchen displays.', i: IMG.epos, cs: true },
+    { t: 'Bookings & Calendar', d: 'Your calendar, online booking page, and appointment management — all in one place. Clients book themselves 24/7.', i: IMG.bookings },
+    { t: 'Online Orders', d: 'Take orders for delivery, collection, and table service. Integrated with your menu and kitchen display.', i: IMG.orders },
+    { t: 'Payments', d: '0.3% debit, 0.7% credit. Among the most competitive rates in the UK. Card readers, online payments, deposits — all built in.', i: IMG.payments },
+    { t: 'Client Book & CRM', d: 'Every client, every visit, every note — in one place. The more you use it, the smarter it gets.', i: IMG.crm },
+    { t: 'Marketing', d: 'Email campaigns, SMS reminders, and automated win-back messages. Built in, no extra tools needed.', i: IMG.marketing },
+    { t: 'Analytics', d: 'Revenue, bookings, retention, no-shows, top services. Everything you need to understand your business.', i: IMG.analytics },
+    { t: 'Website Builder', d: 'Your own professional website, hosted and managed for you. With SEO built in as standard.', i: IMG.branded },
+    { t: 'EPOS & Floor Plan', d: 'Full EPOS for restaurants and service businesses. Floor plan, kitchen display, table management.', i: IMG.epos },
   ]
   return (
-    <section id="features" className="w-full py-12 md:py-20" style={{ background: '#181818' }}>
+    <section id="features" className="w-full py-12 md:py-20" style={{ background: '#111' }}>
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         <div className="text-center mb-8 md:mb-12">
-          <p className="text-xs md:text-sm mb-4" style={{ fontFamily: F, fontWeight: 600, color: '#C9A84C', textTransform: 'uppercase', letterSpacing: '0.15em' }}>EVERYTHING YOU NEED</p>
-          <h2
-            className="text-2xl md:text-4xl lg:text-[48px] mb-3 md:mb-4"
-            style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.1 }}
-          >
-            One system. Nothing missing.
+          <p className="text-xs md:text-sm mb-4" style={{ fontFamily: F, fontWeight: 600, color: '#C9A84C', textTransform: 'uppercase', letterSpacing: '0.15em' }}>EVERYTHING IN ONE PLACE</p>
+          <h2 className="text-2xl md:text-4xl lg:text-[48px]" style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.1 }}>
+            Every tool your business needs.
           </h2>
-          <p className="text-base md:text-xl" style={{ fontFamily: F, color: '#999' }}>From first booking to repeat customer.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {f.map(x => (
-            <motion.div
-              key={x.t}
-              className="rounded-2xl overflow-hidden group"
-              style={{ background: '#111', border: '1px solid #222' }}
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="h-40 md:h-48 overflow-hidden">
-                <img src={x.i} alt={x.t} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <motion.div key={x.t} className="rounded-2xl overflow-hidden" style={{ background: '#181818', border: '1px solid #222' }} whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
+              <div className="h-36 md:h-44 overflow-hidden">
+                <img src={x.i} alt={x.t} className="w-full h-full object-cover" loading="lazy" />
               </div>
-              <div className="p-5 md:p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="4" fill="#C9A84C" fillOpacity="0.2" /><rect x="3" y="3" width="10" height="10" rx="2" fill="#C9A84C" /></svg>
-                  <h3 className="text-base md:text-lg" style={{ fontFamily: F, fontWeight: 600, color: '#FAFAF8' }}>{x.t}</h3>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ fontFamily: F, color: '#999' }}>{x.d}</p>
-                {x.cs && (
-                  <span className="inline-block mt-3 text-xs font-semibold px-3 py-1 rounded-full" style={{ fontFamily: F, color: '#C9A84C', background: 'rgba(201,168,76,0.1)', border: '1px solid #C9A84C' }}>
-                    Coming Soon
-                  </span>
-                )}
+              <div className="p-4 md:p-5">
+                <h3 className="text-base mb-1.5" style={{ fontFamily: F, fontWeight: 600, color: '#FAFAF8' }}>{x.t}</h3>
+                <p className="text-xs leading-relaxed" style={{ fontFamily: F, color: '#999' }}>{x.d}</p>
               </div>
             </motion.div>
           ))}
@@ -345,22 +305,13 @@ function BusinessTypes() {
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         <div className="text-center mb-8 md:mb-12">
           <p className="text-xs md:text-sm mb-4" style={{ fontFamily: F, fontWeight: 600, color: '#C9A84C', textTransform: 'uppercase', letterSpacing: '0.15em' }}>BUILT FOR YOUR BUSINESS</p>
-          <h2
-            className="text-2xl md:text-4xl lg:text-[48px]"
-            style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.1 }}
-          >
+          <h2 className="text-2xl md:text-4xl lg:text-[48px]" style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.1 }}>
             Whatever you run, Reeve runs it better.
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {t.map(x => (
-            <motion.div
-              key={x.t}
-              className="rounded-2xl overflow-hidden group cursor-pointer"
-              style={{ background: '#181818', border: '1px solid #222' }}
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.2 }}
-            >
+            <motion.div key={x.t} className="rounded-2xl overflow-hidden group cursor-pointer" style={{ background: '#181818', border: '1px solid #222' }} whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
               <div className="h-44 md:h-56 overflow-hidden">
                 <img src={x.i} alt={x.t} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               </div>
@@ -396,23 +347,17 @@ function Dashboard() {
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         <div className="text-center mb-8 md:mb-12">
           <p className="text-xs md:text-sm mb-4" style={{ fontFamily: F, fontWeight: 600, color: '#C9A84C', textTransform: 'uppercase', letterSpacing: '0.15em' }}>SEE IT IN ACTION</p>
-          <h2
-            className="text-2xl md:text-4xl lg:text-[48px]"
-            style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.1 }}
-          >
+          <h2 className="text-2xl md:text-4xl lg:text-[48px]" style={{ fontFamily: F, fontWeight: 800, color: '#FAFAF8', letterSpacing: '-0.035em', lineHeight: 1.1 }}>
             Your business, at a glance.
           </h2>
         </div>
-        {/* Browser chrome wrapper */}
         <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid #222' }}>
-          {/* Traffic light dots */}
           <div className="flex items-center gap-2 px-4" style={{ background: '#222', height: 32 }}>
             <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full" style={{ background: '#ef4444' }} />
             <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full" style={{ background: '#eab308' }} />
             <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full" style={{ background: '#22c55e' }} />
           </div>
           <div className="flex flex-col md:flex-row" style={{ background: '#111' }}>
-            {/* Sidebar — hidden on mobile */}
             <div className="hidden md:flex flex-col gap-1 flex-shrink-0" style={{ width: 200, background: '#181818', borderRight: '1px solid #222', padding: '20px 16px' }}>
               {sidebar.map(s => (
                 <div key={s.n} className="flex items-center gap-3 px-3 py-2.5 rounded-lg" style={{ background: s.a ? 'rgba(201,168,76,0.1)' : 'transparent', border: s.a ? '1px solid #C9A84C' : '1px solid transparent' }}>
@@ -421,21 +366,10 @@ function Dashboard() {
                 </div>
               ))}
             </div>
-            {/* Main content area */}
             <div className="flex-1 p-4 md:p-6 lg:p-8">
-              {/* Mobile: horizontal nav pills replacing sidebar */}
-              <div className="flex md:hidden gap-2 mb-4 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
+              <div className="flex md:hidden gap-2 mb-4 overflow-x-auto pb-2 -mx-1 px-1">
                 {sidebar.map(s => (
-                  <span
-                    key={s.n}
-                    className="whitespace-nowrap text-xs px-3 py-1.5 rounded-full flex-shrink-0"
-                    style={{
-                      fontFamily: F,
-                      background: s.a ? 'rgba(201,168,76,0.1)' : '#181818',
-                      border: s.a ? '1px solid #C9A84C' : '1px solid #222',
-                      color: s.a ? '#C9A84C' : '#FAFAF8',
-                    }}
-                  >
+                  <span key={s.n} className="whitespace-nowrap text-xs px-3 py-1.5 rounded-full flex-shrink-0" style={{ fontFamily: F, background: s.a ? 'rgba(201,168,76,0.1)' : '#181818', border: s.a ? '1px solid #C9A84C' : '1px solid #222', color: s.a ? '#C9A84C' : '#FAFAF8' }}>
                     {s.n}
                   </span>
                 ))}
@@ -469,14 +403,18 @@ function Footer() {
           </div>
           <span className="text-xl md:text-2xl" style={{ fontFamily: F, fontWeight: 700, color: '#FAFAF8' }}>ReeveOS</span>
         </div>
+        <div className="flex gap-6 mb-6">
+          <a href="/help-centre" style={{ fontFamily: F, fontSize: 14, color: '#999', textDecoration: 'none' }}>Help Centre</a>
+          <a href="mailto:hello@reeveos.app" style={{ fontFamily: F, fontSize: 14, color: '#999', textDecoration: 'none' }}>Contact</a>
+        </div>
         <p className="text-xs md:text-sm" style={{ fontFamily: F, color: '#999' }}>Zero-commission platform for UK independent businesses. © 2025 ReeveOS. All rights reserved.</p>
       </div>
     </footer>
   )
 }
 
-/* ═══════════════ APP ═══════════════ */
-export default function App() {
+/* ═══════════════ HOMEPAGE ═══════════════ */
+function HomePage() {
   return (
     <div className="min-h-screen overflow-x-hidden" style={{ background: '#111', fontFamily: F }}>
       <Nav />
@@ -488,5 +426,23 @@ export default function App() {
       <Dashboard />
       <Footer />
     </div>
+  )
+}
+
+/* ═══════════════ APP ROOT ═══════════════ */
+export default function App() {
+  return (
+    <Routes>
+      {/* Help centre */}
+      <Route path="/help-centre" element={<HelpHome />} />
+      <Route path="/help-centre/knowledge-base" element={<KnowledgeBase />} />
+      <Route path="/help-centre/knowledge-base/:categoryId" element={<CategoryPage />} />
+      <Route path="/help-centre/knowledge-base/:categoryId/:articleId" element={<ArticlePage />} />
+      <Route path="/help-centre/search" element={<SearchResults />} />
+      <Route path="/help-centre/academy" element={<Academy />} />
+
+      {/* Marketing homepage — catch all */}
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   )
 }
