@@ -5008,6 +5008,702 @@ export const ARTICLES = [
     related: ['edit-staff-profile', 'analytics-overview'],
   },
 
+
+  // ─── CLIENTS & CRM (11 new) ───
+
+  {
+    id: 'add-client-manually',
+    categoryId: 'clients',
+    title: 'Adding a new client manually',
+    intro: 'Add a client without them booking first — useful for walk-ins or when you want to set up profiles in advance.',
+    toc: ['Add a client'],
+    sections: [
+      { title: 'Add a client', steps: [
+        { text: 'Go to CRM > Clients in the sidebar, or click the + button on any page.', screenshot: true },
+        { text: 'Click New Client.' },
+        { text: 'Enter their name, email, and phone number.' },
+        { text: 'Optionally add notes, tags, or assign them to a pipeline stage.' },
+        { text: 'Click Save. The client is now in your system and bookable.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Are clients created automatically when they book?', a: 'Yes — when a new person books online, their profile is created automatically from their booking details.' },
+    ],
+    related: ['client-list', 'edit-client-details'],
+  },
+
+  {
+    id: 'edit-client-details',
+    categoryId: 'clients',
+    title: 'Editing a client\'s details',
+    intro: 'Update a client\'s name, email, phone, or any other information at any time.',
+    toc: ['Edit client details'],
+    sections: [
+      { title: 'Edit client details', steps: [
+        { text: 'Go to CRM > Clients and search for the client.', screenshot: true },
+        { text: 'Click on their name to open their profile.' },
+        { text: 'Click Edit or click directly on any field to update it.' },
+        { text: 'Click Save when done.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does changing their email affect their login?', a: 'Yes — they will need to use the updated email to access their client portal.' },
+    ],
+    related: ['add-client-manually', 'client-list'],
+  },
+
+  {
+    id: 'full-booking-history',
+    categoryId: 'clients',
+    title: 'Viewing a client\'s full booking history',
+    intro: 'See every appointment a client has ever had — what they booked, when, with whom, and whether they showed up.',
+    toc: ['View booking history'],
+    sections: [
+      { title: 'View booking history', steps: [
+        { text: 'Go to CRM > Clients and click on the client.', screenshot: true },
+        { text: 'Click the Appointments tab in their profile.' },
+        { text: 'You\'ll see a complete list: date, service, staff member, status, and amount paid.' },
+        { text: 'Click any appointment to see full details including notes.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I export a client\'s history?', a: 'Not individually yet. You can export the full bookings list filtered to that client.' },
+    ],
+    related: ['client-list', 'view-client-booking-history'],
+  },
+
+  {
+    id: 'private-client-notes',
+    categoryId: 'clients',
+    title: 'Adding private notes to a client profile',
+    intro: 'Keep track of preferences, allergies, or anything your team needs to know. Notes are private — clients never see them.',
+    toc: ['Add a note'],
+    sections: [
+      { title: 'Add a note', steps: [
+        { text: 'Open the client\'s profile from CRM > Clients.', screenshot: true },
+        { text: 'Click the Notes tab.' },
+        { text: 'Click Add Note and type your message.' },
+        { text: 'Click Save. The note is timestamped and visible to all staff who view this client.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I delete a note?', a: 'Yes — click the delete icon next to any note. Deleted notes cannot be recovered.' },
+    ],
+    related: ['therapist-notes', 'client-list'],
+  },
+
+  {
+    id: 'tag-segment-clients',
+    categoryId: 'clients',
+    title: 'Tagging and segmenting clients',
+    intro: 'Use tags to group clients — VIPs, regulars, specific treatment types. Then target them with campaigns.',
+    toc: ['Add tags', 'Use tags for marketing'],
+    sections: [
+      { title: 'Add tags', steps: [
+        { text: 'Open a client\'s profile.', screenshot: true },
+        { text: 'In the Tags section, type a tag name (e.g. VIP, Facials, Wedding Party).' },
+        { text: 'Press Enter to add. You can add multiple tags.' },
+      ]},
+      { title: 'Use tags for marketing', steps: [
+        { text: 'When creating an email campaign in Marketing, you can target clients by tag.' },
+        { text: 'This lets you send specific offers to the right people — e.g. a facial promotion only to clients tagged with Facials.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Are tags visible to clients?', a: 'No — tags are for your internal use only.' },
+    ],
+    related: ['client-list', 'send-email-campaign'],
+  },
+
+  {
+    id: 'client-lifecycle-stages',
+    categoryId: 'clients',
+    title: 'Understanding client lifecycle stages',
+    intro: 'The CRM automatically tracks where each client is in their journey — new, active, cooling down, at risk, or lapsed.',
+    toc: ['The five stages', 'How stages are calculated'],
+    sections: [
+      { title: 'The five stages', steps: [
+        { text: 'New — booked for the first time within the last 30 days.', screenshot: true },
+        { text: 'Active — has visited at least twice and their last visit was within their typical booking frequency.' },
+        { text: 'Cooling — their last visit was slightly longer ago than usual.' },
+        { text: 'At Risk — significantly overdue for their next visit.' },
+        { text: 'Lapsed — hasn\'t visited in 90+ days.' },
+      ]},
+      { title: 'How stages are calculated', steps: [
+        { text: 'The system looks at each client\'s booking history and calculates their average visit frequency.' },
+        { text: 'If they\'re overdue compared to their own pattern, they move through the stages automatically.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I override a client\'s stage?', a: 'The stages are calculated automatically. You can\'t manually change them, but you can use tags for your own classifications.' },
+    ],
+    related: ['client-pipeline', 'crm-analytics'],
+  },
+
+  {
+    id: 'crm-tracks-spend',
+    categoryId: 'clients',
+    title: 'How the CRM tracks client spend',
+    intro: 'Every completed appointment and shop purchase is recorded against the client. You can see lifetime spend at a glance.',
+    toc: ['Where to see spend data'],
+    sections: [
+      { title: 'Where to see spend data', steps: [
+        { text: 'Open any client\'s profile from CRM > Clients.', screenshot: true },
+        { text: 'Their total lifetime spend is shown prominently at the top.' },
+        { text: 'Below that, you can see spend broken down by period — this month, this year, all time.' },
+        { text: 'The CRM dashboard also shows your top spenders across all clients.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does this include product purchases?', a: 'Yes — both appointment revenue and shop purchases count towards lifetime spend.' },
+    ],
+    related: ['client-list', 'crm-analytics'],
+  },
+
+  {
+    id: 'crm-website-visitors',
+    categoryId: 'clients',
+    title: 'How the CRM tracks website visitors',
+    intro: 'If you use the ReeveOS website builder, visitor data feeds into your CRM — so you can see who\'s browsing before they book.',
+    toc: ['How it works'],
+    sections: [
+      { title: 'How it works', steps: [
+        { text: 'When someone visits your ReeveOS-hosted website and then books, their browsing behaviour is linked to their client profile.', screenshot: true },
+        { text: 'You can see which pages they visited, how long they spent, and what they clicked.' },
+        { text: 'This helps you understand what attracted them and tailor your follow-up.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does this work if my website is hosted elsewhere?', a: 'No — website tracking only works with ReeveOS-hosted websites. This is one of the benefits of using our website builder.' },
+    ],
+    related: ['crm-tracks-spend', 'crm-social-media'],
+  },
+
+  {
+    id: 'crm-social-media',
+    categoryId: 'clients',
+    title: 'How the CRM tracks social media engagement',
+    intro: 'When clients book through your Instagram or Facebook booking buttons, the CRM records where they came from.',
+    toc: ['Social media tracking'],
+    sections: [
+      { title: 'Social media tracking', steps: [
+        { text: 'Each booking records its source channel: direct link, Instagram, Facebook, Google, or WhatsApp.', screenshot: true },
+        { text: 'In the CRM, you can filter clients by how they first found you.' },
+        { text: 'The CRM analytics show which channels bring the most clients and revenue.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I see which Instagram post led to a booking?', a: 'The system tracks that the booking came from Instagram, but not the specific post or story.' },
+    ],
+    related: ['crm-website-visitors', 'connect-instagram-booking'],
+  },
+
+  {
+    id: 'crm-spot-opportunities',
+    categoryId: 'clients',
+    title: 'Using CRM analytics to spot opportunities',
+    intro: 'The CRM helps you find clients who might benefit from a nudge — lapsed regulars, big spenders who haven\'t tried your premium treatments, and more.',
+    toc: ['Finding opportunities'],
+    sections: [
+      { title: 'Finding opportunities', steps: [
+        { text: 'Go to CRM > Analytics.', screenshot: true },
+        { text: 'The Retention section shows how many clients are in each lifecycle stage.' },
+        { text: 'Click At Risk to see clients who are overdue — these are your win-back targets.' },
+        { text: 'Click Loyal to see your best clients — consider rewarding them or upselling premium treatments.' },
+        { text: 'Use these insights to create targeted email campaigns from the Marketing section.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can the system automatically send win-back emails?', a: 'Yes — set up automated campaigns in Marketing that trigger when a client enters the At Risk stage.' },
+    ],
+    related: ['client-lifecycle-stages', 'send-email-campaign'],
+  },
+
+  {
+    id: 'export-client-list',
+    categoryId: 'clients',
+    title: 'Exporting your client list',
+    intro: 'Download your full client list as a CSV file for use in other tools or for your records.',
+    toc: ['Export clients'],
+    sections: [
+      { title: 'Export clients', steps: [
+        { text: 'Go to CRM > Clients.', screenshot: true },
+        { text: 'Click the Export button in the top right.' },
+        { text: 'A CSV file downloads with client names, emails, phone numbers, total bookings, and last visit date.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Is the exported data GDPR compliant?', a: 'You\'re responsible for how you use exported data. Ensure you have a lawful basis for processing and store it securely.' },
+    ],
+    related: ['client-list', 'import-clients'],
+  },
+
+  // ─── CONSULTATION FORMS (8 new) ───
+
+  {
+    id: 'consultation-form-sections',
+    categoryId: 'consultation-forms',
+    title: 'Understanding the consultation form sections',
+    intro: 'The form covers six sections that together give you a complete picture of your client\'s health and suitability for treatment.',
+    toc: ['The six sections'],
+    sections: [
+      { title: 'The six sections', steps: [
+        { text: 'Personal Details — name, date of birth, contact information, emergency contact.', screenshot: true },
+        { text: 'Medical History — current conditions, past surgeries, ongoing treatments.' },
+        { text: 'Medications — current medications including supplements, with specific flags for blood thinners, retinoids, and immunosuppressants.' },
+        { text: 'Skin History — skin type, previous treatments, reactions, current skincare routine.' },
+        { text: 'Lifestyle — sun exposure, sunbed use, smoking, planned holidays.' },
+        { text: 'Consent — 10 individual declarations plus digital signature.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'How long does it take clients to fill in?', a: 'About 5 minutes. The form is mobile-friendly and designed to be completed on a phone.' },
+    ],
+    related: ['consultation-forms-overview', 'contraindication-matrix'],
+  },
+
+  {
+    id: 'contraindication-matrix',
+    categoryId: 'consultation-forms',
+    title: 'How the contraindication matrix works',
+    intro: 'The system cross-references 20 medical conditions against your treatment types. Here\'s what gets flagged and what gets blocked.',
+    toc: ['The matrix explained', 'Example conditions'],
+    sections: [
+      { title: 'The matrix explained', steps: [
+        { text: 'When a client submits their form, every medical answer is checked against every treatment you offer.', screenshot: true },
+        { text: 'Each combination results in one of three outcomes: CLEAR (safe), FLAG (needs your judgement), or BLOCK (not safe to proceed).' },
+        { text: 'The matrix covers 20 conditions including pregnancy, blood disorders, autoimmune conditions, active infections, and recent surgery.' },
+      ]},
+      { title: 'Example conditions', steps: [
+        { text: 'Pregnancy — BLOCKS chemical peels and RF treatments. FLAGS microneedling.' },
+        { text: 'Blood thinners — FLAGS microneedling (increased bruising risk).' },
+        { text: 'Active skin infection — BLOCKS ALL treatments until resolved.' },
+        { text: 'Recent Roaccutane use — BLOCKS all ablative treatments for 6-12 months.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I add custom contraindication rules?', a: 'The built-in matrix covers the most common scenarios. Custom rules are on our roadmap.' },
+    ],
+    related: ['contraindications', 'clear-flagged-blocked'],
+  },
+
+  {
+    id: 'clear-flagged-blocked',
+    categoryId: 'consultation-forms',
+    title: 'What Clear, Flagged, and Blocked statuses mean',
+    intro: 'Every consultation form submission gets one of three statuses. Here\'s what each means and what action to take.',
+    toc: ['The three statuses'],
+    sections: [
+      { title: 'The three statuses', steps: [
+        { text: 'Clear (green) — no contraindications found. The client is safe to proceed with all treatments.', screenshot: true },
+        { text: 'Flagged (amber) — one or more answers need your professional review. You decide whether to proceed.' },
+        { text: 'Blocked (red) — the system has identified a safety concern. A specific treatment cannot go ahead based on the client\'s medical history.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I override a Blocked status?', a: 'You can review the details and use your professional judgement. The block is a safety recommendation, not a hard lock.' },
+    ],
+    related: ['contraindications', 'review-flagged-submission'],
+  },
+
+  {
+    id: 'review-flagged-submission',
+    categoryId: 'consultation-forms',
+    title: 'Reviewing a flagged submission',
+    intro: 'When a submission is flagged, the system highlights exactly which answers triggered the flag and which treatments are affected.',
+    toc: ['Review a flagged form'],
+    sections: [
+      { title: 'Review a flagged form', steps: [
+        { text: 'Go to Client Portal > Consultation Forms.', screenshot: true },
+        { text: 'Click the Flagged filter to see only flagged submissions.' },
+        { text: 'Click on a submission to open the full form.' },
+        { text: 'Flagged answers are highlighted in amber with an explanation of why they were flagged.', screenshot: true },
+        { text: 'Review the information and decide whether to proceed, modify the treatment plan, or contact the client for more details.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does the client know they\'ve been flagged?', a: 'The client sees a message saying their form is under review. They don\'t see the specific flag details.' },
+    ],
+    related: ['clear-flagged-blocked', 'contraindications'],
+  },
+
+  {
+    id: 'override-blocked-treatment',
+    categoryId: 'consultation-forms',
+    title: 'Overriding a blocked treatment',
+    intro: 'In some cases, you may want to proceed despite a system block — for example, if the medical situation has changed. Here\'s how.',
+    toc: ['Override a block'],
+    sections: [
+      { title: 'Override a block', steps: [
+        { text: 'Open the blocked submission from Consultation Forms.', screenshot: true },
+        { text: 'Review the reason for the block carefully.' },
+        { text: 'If you\'re satisfied it\'s safe to proceed, click Override Block.' },
+        { text: 'You must enter a reason for the override. This is logged for your records and audit trail.' },
+        { text: 'The override is recorded with your name, timestamp, and reason.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Is the override logged permanently?', a: 'Yes — overrides are part of the audit trail and cannot be deleted. This protects both you and your client.' },
+    ],
+    related: ['clear-flagged-blocked', 'review-flagged-submission'],
+  },
+
+  {
+    id: 'send-forms-distribution',
+    categoryId: 'consultation-forms',
+    title: 'Sending forms via link, QR code, email, or SMS',
+    intro: 'You have four ways to get forms to your clients. Choose the method that works best for your business.',
+    toc: ['Distribution methods'],
+    sections: [
+      { title: 'Distribution methods', steps: [
+        { text: 'Go to Client Portal > Consultation Forms > Distribution tab.', screenshot: true },
+        { text: 'Link — copy a direct URL to your form. Share it by text, email, or social media.' },
+        { text: 'QR Code — download a printable QR code. Put it at reception, on your window, or on business cards.' },
+        { text: 'Email — the form is sent automatically when a client first books (if enabled).' },
+        { text: 'SMS — send the form link by text message to a specific client.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I send forms automatically before every appointment?', a: 'Forms are sent automatically for a client\'s first booking. For subsequent visits, they\'re prompted to confirm any medical changes.' },
+    ],
+    related: ['consultation-forms-overview', 'preview-client-form'],
+  },
+
+  {
+    id: 'preview-client-form',
+    categoryId: 'consultation-forms',
+    title: 'How to preview what your clients see',
+    intro: 'See the exact form your clients fill in — with your branding, your logo, and all six sections.',
+    toc: ['Preview the form'],
+    sections: [
+      { title: 'Preview the form', steps: [
+        { text: 'Go to Client Portal > Consultation Forms.', screenshot: true },
+        { text: 'Click the Preview Portal button in the top right.' },
+        { text: 'The form opens as your clients see it — fully branded with your colours and logo.' },
+        { text: 'Walk through all six sections to check everything looks right.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I customise the form fields?', a: 'The standard form covers the essential medical and consent fields. Custom field editing is on our roadmap.' },
+    ],
+    related: ['consultation-form-sections', 'consultation-forms-overview'],
+  },
+
+  {
+    id: 'automatic-form-distribution',
+    categoryId: 'consultation-forms',
+    title: 'Setting up automatic form distribution before appointments',
+    intro: 'Have forms sent to new clients automatically so they arrive prepared and you can screen before they walk in.',
+    toc: ['Enable automatic sending'],
+    sections: [
+      { title: 'Enable automatic sending', steps: [
+        { text: 'Go to Client Portal > Consultation Forms > Distribution.', screenshot: true },
+        { text: 'Toggle on Automatic Distribution.' },
+        { text: 'Set when the form is sent: at booking confirmation, 48 hours before, or 24 hours before.' },
+        { text: 'New clients receive the form via email. Existing clients with an expired form receive a renewal reminder.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'What if the client doesn\'t fill in the form?', a: 'You\'ll see their submission as missing on the Consultation Forms page. You can send a reminder or ask them to complete it when they arrive.' },
+    ],
+    related: ['send-forms-distribution', 'consultation-forms-overview'],
+  },
+
+  // ─── SHOP & PRODUCTS (7 new) ───
+
+  {
+    id: 'edit-product-details',
+    categoryId: 'shop',
+    title: 'Editing a product\'s details and images',
+    intro: 'Update prices, descriptions, images, or stock levels for any product in your shop.',
+    toc: ['Edit a product'],
+    sections: [
+      { title: 'Edit a product', steps: [
+        { text: 'Go to Shop in the sidebar.', screenshot: true },
+        { text: 'Click on the product you want to update.' },
+        { text: 'Change any field — name, description, price, category, or image.' },
+        { text: 'Click Save. Changes appear on your shop immediately.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does editing a product affect existing orders?', a: 'No — existing orders keep their original details. Only new orders use the updated information.' },
+    ],
+    related: ['add-product', 'archive-product'],
+  },
+
+  {
+    id: 'product-categories',
+    categoryId: 'shop',
+    title: 'Setting up product categories',
+    intro: 'Organise your shop by grouping products into categories like Skincare, Haircare, or Gift Sets.',
+    toc: ['Create categories'],
+    sections: [
+      { title: 'Create categories', steps: [
+        { text: 'Go to Shop in the sidebar.', screenshot: true },
+        { text: 'Click Manage Categories (or the settings icon).' },
+        { text: 'Click Add Category and enter a name.' },
+        { text: 'Drag categories to reorder them. The order here is the order clients see.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can a product be in multiple categories?', a: 'Currently each product belongs to one category.' },
+    ],
+    related: ['add-product', 'edit-product-details'],
+  },
+
+  {
+    id: 'custom-gift-voucher',
+    categoryId: 'shop',
+    title: 'Creating a gift voucher with a custom amount',
+    intro: 'Gift vouchers are one of the most popular things clients buy. Set them up with fixed amounts or let clients choose their own.',
+    toc: ['Create a voucher'],
+    sections: [
+      { title: 'Create a voucher', steps: [
+        { text: 'Go to Shop > Vouchers tab.', screenshot: true },
+        { text: 'Click Add Voucher.' },
+        { text: 'Set fixed amounts (e.g. £25, £50, £100) or enable Custom Amount so clients enter their own.' },
+        { text: 'Add a description and optional image.' },
+        { text: 'Click Save. Vouchers are now available in your shop.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'How do clients redeem vouchers?', a: 'They receive a unique code by email. They quote the code when booking or show it at checkout.' },
+    ],
+    related: ['gift-vouchers', 'track-voucher-redemptions'],
+  },
+
+  {
+    id: 'track-voucher-redemptions',
+    categoryId: 'shop',
+    title: 'Tracking gift voucher redemptions',
+    intro: 'See which vouchers have been redeemed, which are still outstanding, and their remaining balance.',
+    toc: ['View voucher status'],
+    sections: [
+      { title: 'View voucher status', steps: [
+        { text: 'Go to Shop > Vouchers tab.', screenshot: true },
+        { text: 'Each voucher shows its status: Active, Partially Redeemed, or Fully Redeemed.' },
+        { text: 'Click on any voucher to see who bought it, who received it, and all redemption transactions.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Do vouchers expire?', a: 'You can set an expiry period when creating vouchers. Under UK law, gift vouchers must be valid for at least 12 months.' },
+    ],
+    related: ['custom-gift-voucher', 'gift-vouchers'],
+  },
+
+  {
+    id: 'shop-orders-fulfilment',
+    categoryId: 'shop',
+    title: 'Viewing your shop orders and fulfilment',
+    intro: 'When clients buy from your shop, orders appear in your order list for you to fulfil.',
+    toc: ['View and fulfil orders'],
+    sections: [
+      { title: 'View and fulfil orders', steps: [
+        { text: 'Go to Shop > Orders tab.', screenshot: true },
+        { text: 'You\'ll see all orders sorted by date with status: Pending, Fulfilled, or Collected.' },
+        { text: 'Click an order to see what was purchased and the client\'s details.' },
+        { text: 'When the client collects their item, mark it as Fulfilled.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I offer delivery?', a: 'Currently the shop is designed for in-store collection. Delivery options are on our roadmap for restaurant businesses.' },
+    ],
+    related: ['add-product', 'edit-product-details'],
+  },
+
+  {
+    id: 'how-clients-buy',
+    categoryId: 'shop',
+    title: 'How clients buy from your shop',
+    intro: 'Your clients browse and purchase from their client portal. Here\'s what the experience looks like from their side.',
+    toc: ['The client shop experience'],
+    sections: [
+      { title: 'The client shop experience', steps: [
+        { text: 'Clients log into their portal and click Shop.', screenshot: true },
+        { text: 'They browse products and gift vouchers by category.' },
+        { text: 'They add items to their basket and proceed to checkout.' },
+        { text: 'They pay by card (Stripe). You receive the order in your dashboard.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Do clients need an account to buy?', a: 'Yes — they need a client portal account. This is created automatically when they first book.' },
+    ],
+    related: ['add-product', 'shop-orders-fulfilment'],
+  },
+
+  {
+    id: 'low-stock-alerts',
+    categoryId: 'shop',
+    title: 'Managing low-stock alerts',
+    intro: 'Get notified when a product is running low so you never run out of your best sellers.',
+    toc: ['Set up alerts'],
+    sections: [
+      { title: 'Set up alerts', steps: [
+        { text: 'Go to Shop and click on a product.', screenshot: true },
+        { text: 'Enable Track Stock if it isn\'t already.' },
+        { text: 'Set the Low Stock Threshold (e.g. 5 units).' },
+        { text: 'When stock drops below this number, you receive a notification in your dashboard.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does the system auto-reorder?', a: 'No — you receive an alert and reorder manually. Auto-reorder is on our roadmap.' },
+    ],
+    related: ['stock-tracking', 'edit-product-details'],
+  },
+
+  // ─── PAYMENTS & BILLING (7 new) ───
+
+  {
+    id: 'connect-stripe',
+    categoryId: 'payments',
+    title: 'Connecting your Stripe account',
+    intro: 'Stripe handles your online payments — booking fees, shop purchases, and gift vouchers. Here\'s how to connect it.',
+    toc: ['Connect Stripe'],
+    sections: [
+      { title: 'Connect Stripe', steps: [
+        { text: 'Go to Settings > Payments.', screenshot: true },
+        { text: 'Click Connect Stripe.' },
+        { text: 'You\'ll be taken to Stripe to create or link your account.' },
+        { text: 'Once connected, you can accept online payments immediately.' },
+        { text: 'Stripe deposits go directly to your bank account on a rolling basis.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Are there fees?', a: 'Stripe charges standard processing fees (typically 1.4% + 20p for UK cards). ReeveOS does not add any commission on top.' },
+    ],
+    related: ['payment-overview', 'dojo-setup'],
+  },
+
+  {
+    id: 'dojo-setup',
+    categoryId: 'payments',
+    title: 'Setting up Dojo card payments',
+    intro: 'Dojo provides your in-person card machine with rates from 0.3% debit and 0.7% credit.',
+    toc: ['Set up Dojo'],
+    sections: [
+      { title: 'Set up Dojo', steps: [
+        { text: 'Your Dojo card machine is set up by your ReeveOS partner (Grant or your local rep).', screenshot: true },
+        { text: 'Once activated, it connects to your ReeveOS dashboard automatically.' },
+        { text: 'In-person card payments appear in your transaction history alongside online payments.' },
+        { text: 'Dojo settlements go directly to your bank account.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'What are the Dojo rates?', a: '0.3% for debit cards, 0.7% for credit cards, plus 2.5p per authorisation. These are among the most competitive rates in the UK.' },
+    ],
+    related: ['connect-stripe', 'payment-overview'],
+  },
+
+  {
+    id: 'payment-processing-fees',
+    categoryId: 'payments',
+    title: 'Understanding payment processing fees',
+    intro: 'A clear breakdown of what you pay for payment processing — no hidden fees, no commission.',
+    toc: ['Online payments', 'In-person payments'],
+    sections: [
+      { title: 'Online payments (Stripe)', steps: [
+        { text: 'Stripe charges 1.4% + 20p for UK cards, 2.9% + 20p for international cards.' },
+        { text: 'ReeveOS charges zero commission on top of Stripe\'s fees.' },
+      ]},
+      { title: 'In-person payments (Dojo)', steps: [
+        { text: '0.3% for debit cards.' },
+        { text: '0.7% for credit cards.' },
+        { text: '2.5p per authorisation.' },
+        { text: 'VAT applies to Dojo fees only, not to your ReeveOS subscription.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Are there any other hidden fees?', a: 'No. Your ReeveOS subscription and payment processing fees are the only costs. We don\'t charge commission on bookings or sales.' },
+    ],
+    related: ['connect-stripe', 'dojo-setup'],
+  },
+
+  {
+    id: 'booking-fee-refunds',
+    categoryId: 'payments',
+    title: 'How booking fee refunds work',
+    intro: 'When a client cancels with enough notice, their booking fee is automatically refunded. Here\'s the logic.',
+    toc: ['Automatic refunds', 'Manual refunds'],
+    sections: [
+      { title: 'Automatic refunds', steps: [
+        { text: 'If the client cancels outside your cancellation window, the fee is refunded automatically to their card.', screenshot: true },
+        { text: 'If you cancel the booking yourself, the fee is always refunded.' },
+        { text: 'If the client cancels inside the window, the fee is retained (per your cancellation policy).' },
+      ]},
+      { title: 'Manual refunds', steps: [
+        { text: 'Go to the booking details or transaction history.', screenshot: true },
+        { text: 'Click Refund to manually refund a retained fee if you choose to.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'How long do refunds take?', a: 'Refunds typically appear on the client\'s card within 5-10 business days.' },
+    ],
+    related: ['booking-fees', 'cancellation-policy'],
+  },
+
+  {
+    id: 'process-manual-payment',
+    categoryId: 'payments',
+    title: 'Processing a manual payment',
+    intro: 'For cash payments or other methods not handled by the system, record them manually to keep your books accurate.',
+    toc: ['Record a manual payment'],
+    sections: [
+      { title: 'Record a manual payment', steps: [
+        { text: 'Click on the completed appointment in your calendar.', screenshot: true },
+        { text: 'Click Proceed to Checkout.' },
+        { text: 'Select Cash, Bank Transfer, or Other as the payment method.' },
+        { text: 'Enter the amount and click Complete. The payment is recorded in your transaction history.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I split a payment between card and cash?', a: 'Yes — process part as a card payment and record the remainder as a manual payment.' },
+    ],
+    related: ['payment-overview', 'transaction-history'],
+  },
+
+  {
+    id: 'transaction-history-export',
+    categoryId: 'payments',
+    title: 'Viewing and exporting transaction history',
+    intro: 'See every payment that has come through your business and export the data for your accountant.',
+    toc: ['View transactions', 'Export for accounting'],
+    sections: [
+      { title: 'View transactions', steps: [
+        { text: 'Go to Payments in the sidebar (or Business > Payments).', screenshot: true },
+        { text: 'Filter by date range, payment method, or status.' },
+        { text: 'Each transaction shows the client, amount, method, and whether it\'s been settled.' },
+      ]},
+      { title: 'Export for accounting', steps: [
+        { text: 'Click Export in the top right.', screenshot: true },
+        { text: 'A CSV downloads with all transaction data — ready for your accountant or Sage/Xero import.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I connect directly to my accounting software?', a: 'Direct Sage integration is on our roadmap. For now, the CSV export works with all accounting packages.' },
+    ],
+    related: ['payment-overview', 'connect-stripe'],
+  },
+
+  {
+    id: 'how-tips-work',
+    categoryId: 'payments',
+    title: 'How tips work',
+    intro: 'Clients can add a tip when paying online. Here\'s how it works for you and your team.',
+    toc: ['Tips in the system'],
+    sections: [
+      { title: 'Tips in the system', steps: [
+        { text: 'When a client pays online, they\'re offered the option to add a tip.', screenshot: true },
+        { text: 'Tips are recorded separately from the service payment.' },
+        { text: 'In your transaction history, tips show as a separate line item.' },
+        { text: 'You can see total tips per staff member in their performance report.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Are tips included in staff commission calculations?', a: 'That depends on your agreement with your team. Tips are reported separately so you can decide.' },
+    ],
+    related: ['payment-overview', 'staff-performance'],
+  },
+
 ]
 
 export const ARTICLE_MAP = Object.fromEntries(ARTICLES.map(a => [a.id, a]))
