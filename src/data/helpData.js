@@ -3983,6 +3983,296 @@ export const ARTICLES = [
     related: ['dashboard-overview', 'revenue-report'],
   },
 
+
+  // ─── CALENDAR (14 new) ───
+
+  {
+    id: 'switch-calendar-views',
+    categoryId: 'calendar',
+    title: 'Switching between day, week, and month views',
+    intro: 'Your calendar has three views to suit how you work. Switch between them at any time.',
+    toc: ['Change your view', 'When to use each view'],
+    sections: [
+      { title: 'Change your view', steps: [
+        { text: 'At the top of your calendar, you\'ll see view buttons: Day, Week, and Month.', screenshot: true },
+        { text: 'Click any button to switch. The calendar updates instantly.' },
+        { text: 'Use the arrows to move forward or back. Click Today to jump to the current date.' },
+      ]},
+      { title: 'When to use each view', steps: [
+        { text: 'Day view — best for managing a busy day. Shows each staff member as a column.' },
+        { text: 'Week view — great for planning ahead. See the full week and spot gaps.' },
+        { text: 'Month view — high-level picture. Shows booking counts per day.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does changing the view affect anything?', a: 'No — it\'s just a display preference. Your bookings and notifications aren\'t affected.' },
+    ],
+    related: ['create-booking-calendar', 'filter-by-staff'],
+  },
+
+  {
+    id: 'filter-by-staff',
+    categoryId: 'calendar',
+    title: 'Filtering your calendar by staff member',
+    intro: 'When things get busy, filter your calendar to show just one team member\'s bookings.',
+    toc: ['Apply a staff filter', 'Remove the filter'],
+    sections: [
+      { title: 'Apply a staff filter', steps: [
+        { text: 'At the top of your calendar, click the Filter button.', screenshot: true },
+        { text: 'Select the team member you want to see. The calendar shows only their bookings.' },
+      ]},
+      { title: 'Remove the filter', steps: [
+        { text: 'Click the filter again and select All staff to go back to the full view.', screenshot: true },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I filter by multiple staff members?', a: 'Yes — select more than one person. The calendar shows only those you\'ve selected.' },
+    ],
+    related: ['filter-by-service', 'filter-by-status'],
+  },
+
+  {
+    id: 'filter-by-service',
+    categoryId: 'calendar',
+    title: 'Filtering your calendar by service type',
+    intro: 'Need to see all the facials booked today? Filter by service to focus on specific treatments.',
+    toc: ['Apply a service filter'],
+    sections: [
+      { title: 'Apply a service filter', steps: [
+        { text: 'At the top of your calendar, click Filter.', screenshot: true },
+        { text: 'Switch to the Service tab in the filter panel.' },
+        { text: 'Select the service(s) you want to see. To remove, click Clear filters.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I combine staff and service filters?', a: 'Yes — apply both at the same time. For example, show only facials booked with Grace.' },
+    ],
+    related: ['filter-by-staff', 'filter-by-status'],
+  },
+
+  {
+    id: 'filter-by-status',
+    categoryId: 'calendar',
+    title: 'Filtering your calendar by booking status',
+    intro: 'Focus on what needs attention — filter to see only confirmed bookings, pending approvals, or no-shows.',
+    toc: ['Apply a status filter'],
+    sections: [
+      { title: 'Apply a status filter', steps: [
+        { text: 'Click Filter at the top of your calendar.', screenshot: true },
+        { text: 'Switch to the Status tab.' },
+        { text: 'Choose: Pending, Confirmed, Completed, No-show, or Cancelled.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'What\'s the difference between Pending and Confirmed?', a: 'Pending is waiting for approval (if enabled). Confirmed means it\'s accepted and the client has been notified.' },
+    ],
+    related: ['appointment-statuses', 'filter-by-staff'],
+  },
+
+  {
+    id: 'appointment-statuses',
+    categoryId: 'calendar',
+    title: 'Understanding appointment statuses',
+    intro: 'Every booking has a status that tells you where it is in its lifecycle.',
+    toc: ['The five statuses', 'How statuses change'],
+    sections: [
+      { title: 'The five statuses', steps: [
+        { text: 'Pending — requested but not yet confirmed. Only applies if Require Approval is on.', screenshot: true },
+        { text: 'Confirmed — accepted and the client has been notified.' },
+        { text: 'Completed — the appointment is done.' },
+        { text: 'No-show — the client didn\'t turn up.' },
+        { text: 'Cancelled — cancelled by you or the client.' },
+      ]},
+      { title: 'How statuses change', steps: [
+        { text: 'New online bookings arrive as Confirmed (or Pending if approval is required).' },
+        { text: 'When the client arrives, check them in. After treatment, mark as Completed.' },
+        { text: 'If they don\'t show, mark as No-show. The no-show fee is charged if applicable.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I change a status after setting it?', a: 'You can change most statuses, except Completed — once complete, it can\'t be changed back.' },
+    ],
+    related: ['check-in-client', 'mark-completed'],
+  },
+
+  {
+    id: 'check-in-client',
+    categoryId: 'calendar',
+    title: 'How to check in a client when they arrive',
+    intro: 'Checking in marks the client as present and helps you track who\'s in the building.',
+    toc: ['Check in from the calendar'],
+    sections: [
+      { title: 'Check in from the calendar', steps: [
+        { text: 'Find the appointment on your calendar and click it to open the details.', screenshot: true },
+        { text: 'Click the Check In button. The status changes and a green indicator appears.' },
+        { text: 'The arrival time is logged automatically.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does checking in notify the client?', a: 'No — check-in is for your internal tracking only.' },
+      { q: 'What if a client arrives early?', a: 'You can check them in at any time. The system records the actual arrival time.' },
+    ],
+    related: ['mark-completed', 'mark-no-show'],
+  },
+
+  {
+    id: 'mark-completed',
+    categoryId: 'calendar',
+    title: 'How to mark an appointment as completed',
+    intro: 'Marking as completed records that the treatment is done and triggers the review request.',
+    toc: ['Complete from the calendar'],
+    sections: [
+      { title: 'Complete from the calendar', steps: [
+        { text: 'Click the appointment on your calendar.', screenshot: true },
+        { text: 'Click Complete (or Proceed to checkout if payment is involved).' },
+        { text: 'The client receives a thank you message and a review request if enabled.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I undo a completed appointment?', a: 'No — once marked as complete, it can\'t be changed. Make sure details are correct first.' },
+    ],
+    related: ['check-in-client', 'mark-no-show'],
+  },
+
+  {
+    id: 'mark-no-show',
+    categoryId: 'calendar',
+    title: 'How to mark a client as a no-show',
+    intro: 'When a client doesn\'t turn up, marking them as a no-show keeps your records accurate and triggers any no-show fees.',
+    toc: ['Mark as no-show'],
+    sections: [
+      { title: 'Mark as no-show', steps: [
+        { text: 'Click the missed appointment on your calendar.', screenshot: true },
+        { text: 'Click No-show in the details panel.' },
+        { text: 'Confirm when prompted. If the client paid a booking fee and your policy retains it, the fee is kept.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does the client get notified?', a: 'Yes — they receive a message that their appointment was marked as missed.' },
+    ],
+    related: ['check-in-client', 'no-shows'],
+  },
+
+  {
+    id: 'recurring-appointment',
+    categoryId: 'calendar',
+    title: 'Creating a recurring appointment',
+    intro: 'For regular clients who come in at the same time every week or month, set up a recurring booking.',
+    toc: ['Set up a recurring booking'],
+    sections: [
+      { title: 'Set up a recurring booking', steps: [
+        { text: 'Create a new booking as normal — select the client, service, and time.', screenshot: true },
+        { text: 'Before saving, look for the Repeat option at the bottom of the form.' },
+        { text: 'Choose how often: Weekly, Every 2 weeks, Monthly, or Custom.' },
+        { text: 'Set an end date or choose No end date for ongoing appointments.' },
+        { text: 'Click Save. All future appointments are created at once.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I cancel just one occurrence?', a: 'Yes — click the specific appointment and cancel it. You\'ll be asked if you want to cancel just this one or all future ones.' },
+    ],
+    related: ['create-booking-calendar', 'group-booking'],
+  },
+
+  {
+    id: 'group-booking',
+    categoryId: 'calendar',
+    title: 'Creating a group booking',
+    intro: 'Group bookings let multiple clients share the same time slot — useful for classes, workshops, or parties.',
+    toc: ['Create a group booking'],
+    sections: [
+      { title: 'Create a group booking', steps: [
+        { text: 'Click an empty time slot on your calendar.', screenshot: true },
+        { text: 'Select Group Booking from the booking type options.' },
+        { text: 'Add the first client and service as normal.' },
+        { text: 'Click Add another client to add more people to the same slot.' },
+        { text: 'Click Save when all clients are added.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Is there a limit to group size?', a: 'No hard limit for manually created groups. Online groups are limited to 6.' },
+    ],
+    related: ['create-booking-calendar', 'recurring-appointment'],
+  },
+
+  {
+    id: 'view-staff-schedule',
+    categoryId: 'calendar',
+    title: 'Viewing a staff member\'s schedule for the day',
+    intro: 'Need to check what someone has booked today? Here\'s how to quickly see one person\'s schedule.',
+    toc: ['View an individual schedule'],
+    sections: [
+      { title: 'View an individual schedule', steps: [
+        { text: 'In Day view, each staff member has their own column. Find the person you\'re looking for.', screenshot: true },
+        { text: 'Alternatively, use the Filter button and select just that person.' },
+        { text: 'Click their name at the top of their column to view their full profile.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I print a staff member\'s daily schedule?', a: 'Yes — filter to the specific person first, then use your browser\'s print function.' },
+    ],
+    related: ['filter-by-staff', 'switch-calendar-views'],
+  },
+
+  {
+    id: 'tablet-view',
+    categoryId: 'calendar',
+    title: 'Using the tablet view for reception',
+    intro: 'If you have a tablet at reception, the tablet view gives a cleaner layout optimised for checking people in.',
+    toc: ['Switch to tablet view'],
+    sections: [
+      { title: 'Switch to tablet view', steps: [
+        { text: 'At the top of your calendar, click the Tablet button.', screenshot: true },
+        { text: 'The calendar switches to a simplified layout with larger touch targets.' },
+        { text: 'Check-in buttons are more prominent and the display works well on a 10-inch screen.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does the tablet view show the same data?', a: 'Yes — same bookings, same statuses. Just a different layout optimised for touch.' },
+    ],
+    related: ['check-in-client', 'switch-calendar-views'],
+  },
+
+  {
+    id: 'multiple-staff-columns',
+    categoryId: 'calendar',
+    title: 'How the calendar handles multiple staff columns',
+    intro: 'In day view, each staff member gets their own column. Here\'s how it works when you have a team.',
+    toc: ['Understanding the column layout'],
+    sections: [
+      { title: 'Understanding the column layout', steps: [
+        { text: 'In day view, one column per active staff member. Each shows that person\'s bookings.', screenshot: true },
+        { text: 'Staff appear in the order you\'ve set in People > Staff.' },
+        { text: 'Each column is colour-coded so you can tell them apart.' },
+        { text: 'Empty columns show available time slots for that person.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I reorder the columns?', a: 'Yes. Go to People > Staff and drag team members into the order you want.' },
+    ],
+    related: ['filter-by-staff', 'view-staff-schedule'],
+  },
+
+  {
+    id: 'print-daily-schedule',
+    categoryId: 'calendar',
+    title: 'Printing your daily schedule',
+    intro: 'Need a paper copy for the break room? You can print your calendar for any day.',
+    toc: ['Print your schedule'],
+    sections: [
+      { title: 'Print your schedule', steps: [
+        { text: 'Navigate to the day you want to print.', screenshot: true },
+        { text: 'Apply any filters you need (e.g. specific staff member).' },
+        { text: 'Press Ctrl+P (Cmd+P on Mac) to open the print dialog.' },
+        { text: 'Choose Save as PDF to create a digital copy, or select your printer.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I export to a spreadsheet instead?', a: 'Yes — go to the Bookings list view and click Export. This gives you a CSV file.' },
+    ],
+    related: ['switch-calendar-views', 'export-bookings'],
+  },
+
 ]
 
 export const ARTICLE_MAP = Object.fromEntries(ARTICLES.map(a => [a.id, a]))
