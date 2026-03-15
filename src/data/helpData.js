@@ -4273,6 +4273,741 @@ export const ARTICLES = [
     related: ['switch-calendar-views', 'export-bookings'],
   },
 
+
+  // ─── BOOKINGS MANAGEMENT (8 new) ───
+
+  {
+    id: 'search-filter-bookings',
+    categoryId: 'bookings',
+    title: 'Searching and filtering your bookings list',
+    intro: 'The bookings list gives you a complete view of every appointment. Use search and filters to find exactly what you need.',
+    toc: ['Open the bookings list', 'Search and filter'],
+    sections: [
+      { title: 'Open the bookings list', steps: [
+        { text: 'In the sidebar under Calendar, click Bookings.', screenshot: true },
+        { text: 'You\'ll see a list of all bookings sorted by date, with the most recent at the top.' },
+      ]},
+      { title: 'Search and filter', steps: [
+        { text: 'Use the search bar at the top to find bookings by client name or reference number.', screenshot: true },
+        { text: 'Use the date range picker to narrow down to a specific period.' },
+        { text: 'Filter by status (Confirmed, Completed, Cancelled, No-show) using the dropdown.' },
+        { text: 'Filter by staff member to see only their bookings.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I see cancelled bookings?', a: 'Yes — set the status filter to Cancelled. You can see who cancelled and when.' },
+    ],
+    related: ['view-all-bookings', 'export-bookings'],
+  },
+
+  {
+    id: 'export-bookings',
+    categoryId: 'bookings',
+    title: 'Exporting your bookings to a spreadsheet',
+    intro: 'Need your bookings in Excel or Google Sheets? Export them as a CSV file in one click.',
+    toc: ['Export your bookings'],
+    sections: [
+      { title: 'Export your bookings', steps: [
+        { text: 'Go to Bookings from the sidebar.', screenshot: true },
+        { text: 'Apply any filters you want — the export will only include filtered results.' },
+        { text: 'Click the Export button in the top right.' },
+        { text: 'A CSV file downloads to your computer. Open it in Excel, Google Sheets, or any spreadsheet app.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'What data is included in the export?', a: 'Client name, service, date, time, staff member, status, and payment amount.' },
+    ],
+    related: ['search-filter-bookings', 'view-all-bookings'],
+  },
+
+  {
+    id: 'booking-details-panel',
+    categoryId: 'bookings',
+    title: 'Understanding the booking details panel',
+    intro: 'Click any booking to see the full details — client info, service, payment status, notes, and actions you can take.',
+    toc: ['Open the details panel', 'What you can see and do'],
+    sections: [
+      { title: 'Open the details panel', steps: [
+        { text: 'Click any booking on the calendar or in the bookings list.', screenshot: true },
+        { text: 'The details panel opens on the right side of the screen.' },
+      ]},
+      { title: 'What you can see and do', steps: [
+        { text: 'Client name, email, and phone number — click to call or email directly.' },
+        { text: 'Service booked, duration, and price.' },
+        { text: 'Staff member assigned.' },
+        { text: 'Current status with action buttons: Check In, Complete, Cancel, No-show.' },
+        { text: 'Notes section — add internal notes that only your team can see.', screenshot: true },
+        { text: 'Payment status — whether the booking fee has been paid.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can the client see my internal notes?', a: 'No. Notes added from the booking details panel are private to your team.' },
+    ],
+    related: ['create-booking-calendar', 'add-booking-notes'],
+  },
+
+  {
+    id: 'add-booking-notes',
+    categoryId: 'bookings',
+    title: 'Adding notes to a booking',
+    intro: 'Keep track of special requests, preferences, or anything your team needs to know before the appointment.',
+    toc: ['Add a note'],
+    sections: [
+      { title: 'Add a note', steps: [
+        { text: 'Click the booking on your calendar or in the bookings list.', screenshot: true },
+        { text: 'Scroll to the Notes section in the details panel.' },
+        { text: 'Type your note and click Save.' },
+        { text: 'The note is visible to all staff members who view this booking.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can clients see booking notes?', a: 'No — these are internal notes only. Clients never see them.' },
+      { q: 'Is there a character limit?', a: 'No hard limit. Write as much as you need.' },
+    ],
+    related: ['booking-details-panel', 'therapist-notes'],
+  },
+
+  {
+    id: 'view-client-booking-history',
+    categoryId: 'bookings',
+    title: 'Viewing a client\'s booking history',
+    intro: 'See every appointment a client has ever had with you — past, present, and future.',
+    toc: ['View from the client profile', 'View from a booking'],
+    sections: [
+      { title: 'View from the client profile', steps: [
+        { text: 'Go to CRM > Clients in the sidebar.', screenshot: true },
+        { text: 'Search for and click on the client.' },
+        { text: 'Their full booking history is listed under the Appointments tab.' },
+      ]},
+      { title: 'View from a booking', steps: [
+        { text: 'Click any booking on the calendar.', screenshot: true },
+        { text: 'Click the client\'s name in the details panel to jump to their full profile.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I see cancelled bookings in the history?', a: 'Yes — cancelled and no-show appointments are included with their status clearly marked.' },
+    ],
+    related: ['booking-details-panel', 'client-list'],
+  },
+
+  {
+    id: 'cancellation-fee-calculation',
+    categoryId: 'bookings',
+    title: 'How cancellation fees are calculated',
+    intro: 'When a client cancels inside your cancellation window, the booking fee can be retained. Here\'s exactly how it works.',
+    toc: ['How fees are retained', 'When refunds happen'],
+    sections: [
+      { title: 'How fees are retained', steps: [
+        { text: 'If a client cancels inside your cancellation window (e.g. less than 72 hours before the appointment), the booking fee is automatically retained.' },
+        { text: 'The client sees a clear message before confirming: the fee will not be refunded.', screenshot: true },
+        { text: 'The retained fee appears in your transaction history as a cancellation fee.' },
+      ]},
+      { title: 'When refunds happen', steps: [
+        { text: 'If the client cancels outside the cancellation window (with enough notice), the fee is automatically refunded to their card.' },
+        { text: 'If you cancel the appointment yourself, the fee is always refunded regardless of timing.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I override and refund a late cancellation fee?', a: 'Yes — you can manually refund from the transaction details if you choose to.' },
+    ],
+    related: ['cancellation-policy', 'booking-fees'],
+  },
+
+  {
+    id: '72-hour-cancellation',
+    categoryId: 'bookings',
+    title: 'How the 72-hour cancellation policy works',
+    intro: 'The 72-hour policy is designed for advanced treatments that require preparation. Clients must give at least 3 days\' notice.',
+    toc: ['How it works', 'Setting it up'],
+    sections: [
+      { title: 'How it works', steps: [
+        { text: 'When a client books a service with a 72-hour cancellation policy, they agree to the terms at checkout.' },
+        { text: 'If they try to cancel within 72 hours of the appointment, they\'re warned that their booking fee will be retained.', screenshot: true },
+        { text: 'They can still cancel — but the fee is kept.' },
+      ]},
+      { title: 'Setting it up', steps: [
+        { text: 'Go to Settings > Payments.', screenshot: true },
+        { text: 'Under Cancellation Policy, select the 72-hour (Advanced) option.' },
+        { text: 'Set the booking fee amount. Click Save.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I use different policies for different services?', a: 'The cancellation policy applies globally to all services. Per-service policies are on our roadmap.' },
+    ],
+    related: ['cancellation-policy', 'cancellation-fee-calculation'],
+  },
+
+  {
+    id: 'manage-waitlist',
+    categoryId: 'bookings',
+    title: 'Managing the cancellation waitlist',
+    intro: 'When a popular time slot opens up due to a cancellation, the waitlist automatically notifies interested clients.',
+    toc: ['How the waitlist works', 'Viewing waitlist entries'],
+    sections: [
+      { title: 'How the waitlist works', steps: [
+        { text: 'When a client tries to book a fully booked time, they can join the waitlist.', screenshot: true },
+        { text: 'If a cancellation opens that slot, waitlisted clients are notified immediately.' },
+        { text: 'First client to respond and book takes the slot.' },
+      ]},
+      { title: 'Viewing waitlist entries', steps: [
+        { text: 'The Waitlist count shows on your dashboard.', screenshot: true },
+        { text: 'Click it to see all current waitlist entries with client names and preferred times.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I manually add someone to the waitlist?', a: 'Currently clients join the waitlist themselves through the booking page. Manual waitlist management is on our roadmap.' },
+    ],
+    related: ['waitlist', 'view-all-bookings'],
+  },
+
+  // ─── BOOKING LINK & CHANNELS (8 new) ───
+
+  {
+    id: 'connect-instagram-booking',
+    categoryId: 'booking-link',
+    title: 'Connecting your Instagram Book Now button',
+    intro: 'Add a Book Now button to your Instagram profile so followers can book directly from the app.',
+    toc: ['Connect Instagram', 'How it works for clients'],
+    sections: [
+      { title: 'Connect Instagram', steps: [
+        { text: 'Go to Booking Link in the sidebar.', screenshot: true },
+        { text: 'Scroll to Booking Channels and find Instagram Book Button.' },
+        { text: 'Click Connect and follow the prompts to link your Instagram business account.' },
+        { text: 'Once connected, a Book Now action button appears on your Instagram profile.' },
+      ]},
+      { title: 'How it works for clients', steps: [
+        { text: 'Clients visiting your Instagram profile see a Book Now button.' },
+        { text: 'Tapping it opens your ReeveOS booking page where they choose a service, date, and time.' },
+        { text: 'The booking shows up in your calendar with Instagram as the source channel.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Do I need an Instagram business account?', a: 'Yes — the Book Now button is only available on business or creator accounts.' },
+    ],
+    related: ['set-up-booking-link', 'connect-facebook-booking'],
+  },
+
+  {
+    id: 'connect-facebook-booking',
+    categoryId: 'booking-link',
+    title: 'Connecting your Facebook booking button',
+    intro: 'Turn your Facebook page followers into bookings with a direct booking button.',
+    toc: ['Connect Facebook'],
+    sections: [
+      { title: 'Connect Facebook', steps: [
+        { text: 'Go to Booking Link > Booking Channels.', screenshot: true },
+        { text: 'Find Facebook Page and click Connect.' },
+        { text: 'Log into Facebook and select the business page you want to link.' },
+        { text: 'A Book Now button appears on your Facebook page. Clients click it to book.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I connect multiple Facebook pages?', a: 'Currently one page per business. Multi-location businesses can connect different pages per location.' },
+    ],
+    related: ['connect-instagram-booking', 'set-up-booking-link'],
+  },
+
+  {
+    id: 'whatsapp-booking-link',
+    categoryId: 'booking-link',
+    title: 'Adding a WhatsApp booking link',
+    intro: 'Let clients book via WhatsApp by sharing a quick-reply booking link.',
+    toc: ['Set up WhatsApp booking'],
+    sections: [
+      { title: 'Set up WhatsApp booking', steps: [
+        { text: 'Go to Booking Link > Booking Channels.', screenshot: true },
+        { text: 'Find WhatsApp Business and click Connect.' },
+        { text: 'Enter your WhatsApp business number.' },
+        { text: 'Clients can now tap a link that opens WhatsApp with a pre-filled booking message.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does this work with personal WhatsApp?', a: 'It works with both personal and business WhatsApp accounts.' },
+    ],
+    related: ['set-up-booking-link', 'connect-instagram-booking'],
+  },
+
+  {
+    id: 'customise-booking-page',
+    categoryId: 'booking-link',
+    title: 'Customising your public booking page',
+    intro: 'Your booking page is what clients see when they click your link. Make it yours with your branding and details.',
+    toc: ['What you can customise'],
+    sections: [
+      { title: 'What you can customise', steps: [
+        { text: 'Your business name, logo, and cover image appear at the top — set these in Settings > Business Profile.', screenshot: true },
+        { text: 'Your services are listed in the order you\'ve set in the Services section.' },
+        { text: 'Only services marked as visible in Online Booking appear on the booking page.' },
+        { text: 'Your opening hours determine which time slots are shown as available.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I add a custom message or welcome text?', a: 'Your business description from Settings shows at the top of the booking page.' },
+    ],
+    related: ['set-up-booking-link', 'booking-page-analytics'],
+  },
+
+  {
+    id: 'booking-page-analytics',
+    categoryId: 'booking-link',
+    title: 'Understanding your booking page analytics',
+    intro: 'See how many people visit your booking page, how many start a booking, and how many complete it.',
+    toc: ['Reading the metrics', 'Improving your conversion'],
+    sections: [
+      { title: 'Reading the metrics', steps: [
+        { text: 'Go to Booking Link. The three cards below your URL show your performance.', screenshot: true },
+        { text: 'Page Views — total visitors to your booking page.' },
+        { text: 'Click Through — percentage who started selecting a service.' },
+        { text: 'Bookings — completed bookings with conversion rate.' },
+      ]},
+      { title: 'Improving your conversion', steps: [
+        { text: 'If Page Views are high but Click Through is low, your service descriptions or pricing might need work.' },
+        { text: 'If Click Through is high but Bookings are low, the booking flow might have friction — check your required fields and payment settings.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'How often do the numbers update?', a: 'In real time. Every visit and booking is counted immediately.' },
+    ],
+    related: ['set-up-booking-link', 'customise-booking-page'],
+  },
+
+  {
+    id: 'what-clients-see-booking',
+    categoryId: 'booking-link',
+    title: 'What your clients see when they visit your booking page',
+    intro: 'Here\'s the step-by-step experience from your client\'s perspective — what they see, what they click, and how they book.',
+    toc: ['The client booking flow'],
+    sections: [
+      { title: 'The client booking flow', steps: [
+        { text: 'They see your business name, logo, and cover image at the top.', screenshot: true },
+        { text: 'Below that, your services are listed by category. They tap to select one.' },
+        { text: 'They choose a date from the calendar.' },
+        { text: 'They see available time slots and select one.' },
+        { text: 'If you have multiple staff, they can choose who they want (or select No preference).' },
+        { text: 'They confirm and enter their details. If a booking fee is required, they pay now.' },
+        { text: 'They receive a confirmation by email and/or SMS.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can clients book without creating an account?', a: 'They enter their name, email, and phone. An account is created automatically for future bookings.' },
+    ],
+    related: ['customise-booking-page', 'set-up-booking-link'],
+  },
+
+  {
+    id: 'generate-qr-code',
+    categoryId: 'booking-link',
+    title: 'How to generate a QR code for your booking link',
+    intro: 'Print a QR code for your reception desk, window, or business cards so clients can scan and book.',
+    toc: ['Generate your QR code'],
+    sections: [
+      { title: 'Generate your QR code', steps: [
+        { text: 'Go to Booking Link in the sidebar.', screenshot: true },
+        { text: 'Click the QR code icon next to your booking URL.' },
+        { text: 'A QR code is generated that links directly to your booking page.' },
+        { text: 'Click Download to save it as an image. Print it and put it wherever clients will see it.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does the QR code change if my booking link changes?', a: 'Yes — regenerate the QR code if your link URL changes.' },
+    ],
+    related: ['set-up-booking-link', 'share-link-text-message'],
+  },
+
+  {
+    id: 'share-link-text-message',
+    categoryId: 'booking-link',
+    title: 'Sharing your booking link via text message',
+    intro: 'Send your booking link directly to a client\'s phone so they can book in seconds.',
+    toc: ['Share via text'],
+    sections: [
+      { title: 'Share via text', steps: [
+        { text: 'Go to Booking Link and click Copy Link.', screenshot: true },
+        { text: 'Open your phone\'s messaging app and paste the link into a text.' },
+        { text: 'Add a personal message like: Hi Sarah, here\'s the link to book your next appointment with us.' },
+        { text: 'Send it. When they tap the link, your booking page opens on their phone.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I send booking links in bulk?', a: 'Yes — use the Marketing > Email Campaigns feature to send your booking link to your full client list.' },
+    ],
+    related: ['set-up-booking-link', 'generate-qr-code'],
+  },
+
+  // ─── SERVICES (9 new) ───
+
+  {
+    id: 'edit-existing-service',
+    categoryId: 'services',
+    title: 'Editing an existing service',
+    intro: 'Need to update a price, change the duration, or tweak a description? Here\'s how to edit any service.',
+    toc: ['Edit a service'],
+    sections: [
+      { title: 'Edit a service', steps: [
+        { text: 'Go to Services in the sidebar.', screenshot: true },
+        { text: 'Click on the service you want to edit.' },
+        { text: 'Update any field — name, description, duration, price, staff, or category.' },
+        { text: 'Click Save. Changes take effect immediately on your booking page.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does editing a service affect existing bookings?', a: 'No — existing bookings keep their original details. Only new bookings use the updated information.' },
+    ],
+    related: ['add-a-service', 'archive-service'],
+  },
+
+  {
+    id: 'archive-service',
+    categoryId: 'services',
+    title: 'Deleting or archiving a service',
+    intro: 'If you no longer offer a service, archive it to remove it from your menu while keeping the history.',
+    toc: ['Archive a service'],
+    sections: [
+      { title: 'Archive a service', steps: [
+        { text: 'Go to Services and click the service you want to remove.', screenshot: true },
+        { text: 'Click the Archive button (or Delete if available).' },
+        { text: 'Confirm when prompted. The service is removed from your booking page immediately.' },
+        { text: 'Archived services can be restored later from Deleted Items.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'What happens to existing bookings for this service?', a: 'Existing bookings are not affected. The service is only removed from future availability.' },
+    ],
+    related: ['edit-existing-service', 'add-a-service'],
+  },
+
+  {
+    id: 'reorder-services',
+    categoryId: 'services',
+    title: 'Reordering services and categories',
+    intro: 'Control the order your services appear on your booking page by dragging them into the right position.',
+    toc: ['Reorder services'],
+    sections: [
+      { title: 'Reorder services', steps: [
+        { text: 'Go to Services in the sidebar.', screenshot: true },
+        { text: 'Drag services up or down to change their order.' },
+        { text: 'To reorder categories, drag the category headers.' },
+        { text: 'The order you set here is the order clients see on your booking page.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I put my most popular services first?', a: 'Yes — drag your most booked services to the top so clients find them quickly.' },
+    ],
+    related: ['add-a-service', 'service-categories'],
+  },
+
+  {
+    id: 'different-staff-durations',
+    categoryId: 'services',
+    title: 'Setting different durations for different staff',
+    intro: 'If a senior therapist takes less time than a junior for the same treatment, you can set staff-specific durations.',
+    toc: ['Set staff-specific durations'],
+    sections: [
+      { title: 'Set staff-specific durations', steps: [
+        { text: 'Go to Services and click on the service.', screenshot: true },
+        { text: 'In the Staff section, enable staff-specific settings.' },
+        { text: 'For each staff member, set their individual duration and price.' },
+        { text: 'Click Save. The calendar and booking page adjust automatically.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does this affect online booking?', a: 'Yes — when a client selects a specific staff member, they see that person\'s duration and price.' },
+    ],
+    related: ['staff-specific-pricing', 'add-a-service'],
+  },
+
+  {
+    id: 'service-description-image',
+    categoryId: 'services',
+    title: 'Adding a description and image to a service',
+    intro: 'A good description and photo help clients understand what they\'re booking and increase your conversion rate.',
+    toc: ['Add description and image'],
+    sections: [
+      { title: 'Add description and image', steps: [
+        { text: 'Go to Services and click on the service.', screenshot: true },
+        { text: 'In the Description field, write a clear explanation of what the treatment involves and what results to expect.' },
+        { text: 'Click the image upload area to add a photo. This appears on your booking page next to the service.' },
+        { text: 'Click Save.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'What makes a good service description?', a: 'Keep it client-focused — explain what they\'ll experience and the benefits, not the technical process.' },
+    ],
+    related: ['add-a-service', 'edit-existing-service'],
+  },
+
+  {
+    id: 'processing-time',
+    categoryId: 'services',
+    title: 'Setting up processing time between bookings',
+    intro: 'If you need cleanup or prep time between clients, add processing time so the calendar accounts for it.',
+    toc: ['Add processing time'],
+    sections: [
+      { title: 'Add processing time', steps: [
+        { text: 'Go to Services and click on the service.', screenshot: true },
+        { text: 'Look for the Processing Time or Buffer Time field.' },
+        { text: 'Set the number of minutes needed after each appointment (e.g. 15 minutes for room turnover).' },
+        { text: 'Click Save. The calendar now blocks this time after every booking of this service.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can clients see the processing time?', a: 'No — clients only see the treatment duration. The processing time is blocked internally.' },
+    ],
+    related: ['add-a-service', 'edit-existing-service'],
+  },
+
+  {
+    id: 'service-bundle',
+    categoryId: 'services',
+    title: 'Creating a service bundle',
+    intro: 'Combine multiple treatments into one bookable package — great for facial and body combos or pamper days.',
+    toc: ['Create a bundle'],
+    sections: [
+      { title: 'Create a bundle', steps: [
+        { text: 'Go to Services and click Add Service.', screenshot: true },
+        { text: 'Name the bundle (e.g. Ultimate Pamper Package).' },
+        { text: 'In the service details, add multiple treatments using the Add Service button.' },
+        { text: 'Set a bundle price (usually discounted from the individual total).' },
+        { text: 'The total duration is calculated automatically from all included treatments.' },
+        { text: 'Click Save. Clients can now book the whole bundle as one appointment.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can clients book individual services from the bundle separately?', a: 'Yes — the bundle is an additional option. Individual services remain bookable on their own.' },
+    ],
+    related: ['add-a-service', 'packages'],
+  },
+
+  {
+    id: 'manage-online-menu',
+    categoryId: 'services',
+    title: 'Managing your online booking menu',
+    intro: 'Control exactly which services your clients can see and book online. Hide internal-only services from the public.',
+    toc: ['Toggle service visibility'],
+    sections: [
+      { title: 'Toggle service visibility', steps: [
+        { text: 'Go to Services in the sidebar, then click Online Booking below it.', screenshot: true },
+        { text: 'You\'ll see all your services with toggle switches.' },
+        { text: 'Toggle off any service you don\'t want clients to book online.' },
+        { text: 'Toggled-off services still appear in your internal system for manual bookings.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I make a service bookable by phone only?', a: 'Yes — toggle it off from online booking. Clients can call to book, and you add it manually.' },
+    ],
+    related: ['hide-service-online', 'add-a-service'],
+  },
+
+  {
+    id: 'free-consultation-service',
+    categoryId: 'services',
+    title: 'How to offer a free consultation as a service',
+    intro: 'Set up a free consultation that clients can book online — great for new clients who want to discuss treatments first.',
+    toc: ['Create a free consultation'],
+    sections: [
+      { title: 'Create a free consultation', steps: [
+        { text: 'Go to Services and click Add Service.', screenshot: true },
+        { text: 'Name it something welcoming: Free Consultation, Discovery Call, or Initial Chat.' },
+        { text: 'Set the price to £0.' },
+        { text: 'Set the duration (typically 15-30 minutes).' },
+        { text: 'Make sure it\'s visible in Online Booking so clients can book it themselves.' },
+        { text: 'Click Save. Clients can now book a free consultation from your booking page.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I require a booking fee for free consultations?', a: 'You can, but we\'d recommend against it — the point is to remove barriers for new clients.' },
+    ],
+    related: ['add-a-service', 'consultation-forms-overview'],
+  },
+
+  // ─── STAFF MANAGEMENT (9 new) ───
+
+  {
+    id: 'staff-specific-services',
+    categoryId: 'staff',
+    title: 'Setting up staff-specific services',
+    intro: 'Choose exactly which services each team member can perform. This controls what appears on the booking page when clients select a person.',
+    toc: ['Assign services to staff'],
+    sections: [
+      { title: 'Assign services to staff', steps: [
+        { text: 'Go to People > Staff in the sidebar.', screenshot: true },
+        { text: 'Click on the team member.' },
+        { text: 'Click the Services tab in their profile.' },
+        { text: 'Toggle on each service they can perform. Toggle off services they don\'t do.' },
+        { text: 'Click Save. The booking page now only shows this person for their assigned services.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'What if I want everyone to do all services?', a: 'By default, new staff are assigned to all services. You only need to change this if some people specialise.' },
+    ],
+    related: ['invite-staff-member', 'staff-permissions'],
+  },
+
+  {
+    id: 'staff-permissions',
+    categoryId: 'staff',
+    title: 'Managing staff permissions and access levels',
+    intro: 'Control what each team member can see and do. Your receptionist doesn\'t need to see the finances.',
+    toc: ['Understanding roles', 'Customising access'],
+    sections: [
+      { title: 'Understanding roles', steps: [
+        { text: 'Staff — can see their own calendar, bookings, and assigned clients only.' },
+        { text: 'Manager — can see all staff calendars, all clients, and basic reports.' },
+        { text: 'Admin — full access to everything including settings, payments, and team management.' },
+      ]},
+      { title: 'Customising access', steps: [
+        { text: 'Go to People > Staff and click on the team member.', screenshot: true },
+        { text: 'In the Role dropdown, select the appropriate level.' },
+        { text: 'Click Save. Their dashboard immediately adjusts to show only what their role allows.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I create custom roles?', a: 'Not currently — we offer three standard roles. Custom permissions are on our roadmap.' },
+    ],
+    related: ['invite-staff-member', 'edit-staff-profile'],
+  },
+
+  {
+    id: 'edit-staff-profile',
+    categoryId: 'staff',
+    title: 'Editing a staff member\'s profile',
+    intro: 'Update a team member\'s name, contact details, role, or photo at any time.',
+    toc: ['Edit a profile'],
+    sections: [
+      { title: 'Edit a profile', steps: [
+        { text: 'Go to People > Staff and click on the person.', screenshot: true },
+        { text: 'Update any field: name, email, phone, role, or bio.' },
+        { text: 'Click Save to apply changes.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Does changing their email affect their login?', a: 'Yes — they\'ll need to use the new email to log in. They\'ll receive a notification about the change.' },
+    ],
+    related: ['invite-staff-member', 'staff-permissions'],
+  },
+
+  {
+    id: 'deactivate-staff',
+    categoryId: 'staff',
+    title: 'Deactivating or removing a staff member',
+    intro: 'When someone leaves your team, deactivate their profile to remove them from the calendar and booking page.',
+    toc: ['Deactivate a staff member'],
+    sections: [
+      { title: 'Deactivate a staff member', steps: [
+        { text: 'Go to People > Staff and click on the person.', screenshot: true },
+        { text: 'Click Deactivate (or Remove) at the bottom of their profile.' },
+        { text: 'Confirm when prompted. Their future bookings will need to be reassigned or cancelled.' },
+        { text: 'Their profile is kept for historical records but they no longer appear on the calendar or booking page.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I reactivate them later?', a: 'Yes — deactivated profiles can be reactivated at any time from the staff list.' },
+      { q: 'What happens to their existing bookings?', a: 'You\'ll be prompted to reassign or cancel their upcoming bookings.' },
+    ],
+    related: ['invite-staff-member', 'edit-staff-profile'],
+  },
+
+  {
+    id: 'lunch-breaks-split-shifts',
+    categoryId: 'staff',
+    title: 'Setting up lunch breaks and split shifts',
+    intro: 'Add breaks into your team\'s schedule so clients can\'t book during lunch or between split shifts.',
+    toc: ['Add a break'],
+    sections: [
+      { title: 'Add a break', steps: [
+        { text: 'Go to People > Staff and click on the team member.', screenshot: true },
+        { text: 'Click the Availability tab.' },
+        { text: 'For any day, click Add Break and set the start and end time (e.g. 1:00pm - 2:00pm).' },
+        { text: 'For split shifts, set the first shift (e.g. 9am-1pm), add a break, then set the second shift (e.g. 3pm-7pm).' },
+        { text: 'Click Save. The break time is blocked on the calendar and not available for online booking.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can staff override their break to take a booking?', a: 'You can manually create a booking during a break from the calendar, but clients can\'t book it online.' },
+    ],
+    related: ['staff-working-hours', 'block-time'],
+  },
+
+  {
+    id: 'staff-multiple-locations',
+    categoryId: 'staff',
+    title: 'Managing staff across multiple locations',
+    intro: 'If your team works at more than one location, you can assign them to specific sites and set different hours for each.',
+    toc: ['Assign locations'],
+    sections: [
+      { title: 'Assign locations', steps: [
+        { text: 'Go to People > Staff and click on the team member.', screenshot: true },
+        { text: 'In their profile, find the Locations section.' },
+        { text: 'Toggle on each location where they work.' },
+        { text: 'Set different availability hours for each location if needed.' },
+        { text: 'Click Save. Their calendar shows bookings across all assigned locations.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can a staff member be booked at two locations on the same day?', a: 'The system prevents double-booking. If they\'re booked at one location, that time is blocked at all others.' },
+    ],
+    related: ['invite-staff-member', 'staff-working-hours'],
+  },
+
+  {
+    id: 'staff-colours-calendar',
+    categoryId: 'staff',
+    title: 'How staff colours appear in the calendar',
+    intro: 'Each staff member has a unique colour that makes it easy to spot their bookings at a glance.',
+    toc: ['How colours work'],
+    sections: [
+      { title: 'How colours work', steps: [
+        { text: 'In the calendar\'s Day view, each staff member has their own column with a colour bar at the top.', screenshot: true },
+        { text: 'Their bookings use the same colour, making it easy to see who\'s doing what.' },
+        { text: 'Colours are assigned automatically when you add staff. You can change them in the staff profile.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can I choose the colour?', a: 'Yes — click on the colour swatch in the staff member\'s profile to pick a different one.' },
+    ],
+    related: ['multiple-staff-columns', 'invite-staff-member'],
+  },
+
+  {
+    id: 'staff-profile-photo',
+    categoryId: 'staff',
+    title: 'Setting a staff member\'s profile photo',
+    intro: 'A profile photo helps clients choose who they want to book with. It appears on your booking page and in the calendar.',
+    toc: ['Upload a photo'],
+    sections: [
+      { title: 'Upload a photo', steps: [
+        { text: 'Go to People > Staff and click on the team member.', screenshot: true },
+        { text: 'Click the photo placeholder at the top of their profile.' },
+        { text: 'Upload a clear, professional headshot (square, at least 300×300 pixels).' },
+        { text: 'Click Save. The photo now appears on the booking page and in the calendar.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Is the photo required?', a: 'No — if no photo is uploaded, their initials are shown in a coloured circle instead.' },
+    ],
+    related: ['edit-staff-profile', 'invite-staff-member'],
+  },
+
+  {
+    id: 'staff-performance',
+    categoryId: 'staff',
+    title: 'Viewing a staff member\'s performance and bookings',
+    intro: 'See how each team member is performing — their booking count, revenue, and client retention.',
+    toc: ['View performance'],
+    sections: [
+      { title: 'View performance', steps: [
+        { text: 'Go to People > Staff and click on the team member.', screenshot: true },
+        { text: 'Their profile shows a summary: total bookings, revenue generated, average rating, and no-show rate.' },
+        { text: 'Click View Full Stats for a detailed breakdown by period.' },
+        { text: 'Use this data for team reviews, commission calculations, or identifying training needs.' },
+      ]},
+    ],
+    faqs: [
+      { q: 'Can staff see their own performance?', a: 'Staff members can see their own booking count and ratings. Revenue details are only visible to Managers and Admins.' },
+    ],
+    related: ['edit-staff-profile', 'analytics-overview'],
+  },
+
 ]
 
 export const ARTICLE_MAP = Object.fromEntries(ARTICLES.map(a => [a.id, a]))
