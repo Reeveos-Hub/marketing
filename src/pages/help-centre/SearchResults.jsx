@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import HelpLayout from './HelpLayout'
 import { ARTICLES, CATEGORY_MAP } from '../../data/helpData'
+import CategoryIcon from '../../components/CategoryIcon'
 
 const F = 'Figtree, system-ui, sans-serif'
 const GOLD = '#C9A84C'
@@ -64,8 +65,8 @@ export default function SearchResults() {
                     onMouseLeave={e => { e.currentTarget.style.borderColor = '#E5E5E5'; e.currentTarget.style.boxShadow = 'none' }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
-                      <span style={{ fontFamily: F, fontSize: 12, fontWeight: 600, color: GOLD, background: '#FBF6E9', padding: '2px 8px', borderRadius: 4 }}>
-                        {cat?.icon} {cat?.title}
+                      <span style={{ fontFamily: F, fontSize: 12, fontWeight: 600, color: GOLD, background: '#FBF6E9', padding: '2px 8px', borderRadius: 4, display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                        <CategoryIcon name={cat?.icon} size={14} /> {cat?.title}
                       </span>
                     </div>
                     <div style={{ fontFamily: F, fontSize: 15, fontWeight: 600, color: BLACK, marginBottom: 4 }}>{a.title}</div>

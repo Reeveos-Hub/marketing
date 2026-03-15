@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import HelpLayout from './HelpLayout'
 import { CATEGORIES, ARTICLES, CATEGORY_MAP } from '../../data/helpData'
+import CategoryIcon from '../../components/CategoryIcon'
 
 const F = 'Figtree, system-ui, sans-serif'
 const GOLD = '#C9A84C'
@@ -35,7 +36,7 @@ export default function CategoryPage() {
 
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 8 }}>
-          <span style={{ fontSize: 32 }}>{cat.icon}</span>
+          <CategoryIcon name={cat.icon} size={32} />
           <h1 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: BLACK, margin: 0 }}>{cat.title}</h1>
         </div>
         <p style={{ fontFamily: F, fontSize: 16, color: '#666', marginBottom: 36 }}>{cat.desc}</p>

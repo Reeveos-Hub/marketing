@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import HelpLayout from './HelpLayout'
 import { CATEGORIES, ARTICLES } from '../../data/helpData'
+import CategoryIcon from '../../components/CategoryIcon'
 
 const F = 'Figtree, system-ui, sans-serif'
 const GOLD = '#C9A84C'
@@ -111,7 +112,7 @@ export default function HelpHome() {
                   onMouseEnter={e => { e.currentTarget.style.borderColor = GOLD; e.currentTarget.style.boxShadow = '0 2px 12px rgba(201,168,76,0.12)' }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = '#E5E5E5'; e.currentTarget.style.boxShadow = 'none' }}
                 >
-                  <div style={{ fontSize: 28, marginBottom: 10 }}>{cat.icon}</div>
+                  <div style={{ marginBottom: 10 }}><CategoryIcon name={cat.icon} size={28} /></div>
                   <div style={{ fontFamily: F, fontSize: 15, fontWeight: 600, color: BLACK, marginBottom: 4 }}>{cat.title}</div>
                   <div style={{ fontFamily: F, fontSize: 13, color: '#888', marginBottom: 10, lineHeight: 1.4 }}>{cat.desc}</div>
                   <div style={{ fontFamily: F, fontSize: 13, color: GOLD, fontWeight: 500 }}>{count} article{count !== 1 ? 's' : ''}</div>

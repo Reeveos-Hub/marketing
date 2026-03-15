@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import HelpLayout from './HelpLayout'
 import { CATEGORIES, ARTICLES } from '../../data/helpData'
+import CategoryIcon from '../../components/CategoryIcon'
 
 const F = 'Figtree, system-ui, sans-serif'
 const GOLD = '#C9A84C'
@@ -35,7 +36,7 @@ export default function KnowledgeBase() {
                     onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-                      <span style={{ fontSize: 22 }}>{cat.icon}</span>
+                      <CategoryIcon name={cat.icon} size={22} />
                       <span style={{ fontFamily: F, fontSize: 16, fontWeight: 700, color: BLACK }}>{cat.title}</span>
                     </div>
                     <div style={{ fontFamily: F, fontSize: 13, color: '#888', lineHeight: 1.5 }}>{cat.desc}</div>
