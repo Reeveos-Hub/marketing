@@ -5704,6 +5704,1010 @@ export const ARTICLES = [
     related: ['payment-overview', 'staff-performance'],
   },
 
+
+  // ─── REVIEWS (5 new) ───
+
+  {
+    id: 'auto-review-requests',
+    categoryId: 'reviews',
+    title: 'Setting up automatic review requests after appointments',
+    intro: 'Get more reviews without lifting a finger. The system sends a review request after every completed appointment.',
+    toc: ['Enable automatic requests'],
+    sections: [
+      { title: 'Enable automatic requests', steps: [
+        { text: 'Go to Settings > Notifications.', screenshot: true },
+        { text: 'Find the Post-Appointment section.' },
+        { text: 'Toggle on Review Request.' },
+        { text: 'Set when it sends: immediately after checkout, 1 hour later, or 24 hours later.' },
+        { text: 'Save. Every completed appointment now triggers a review request.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can clients opt out?', a: 'Yes — they can unsubscribe from review requests via a link in the email.' }],
+    related: ['review-sources', 'manage-google-reviews'],
+  },
+
+  {
+    id: 'manage-google-reviews',
+    categoryId: 'reviews',
+    title: 'Managing your Google review link',
+    intro: 'Direct clients to leave reviews on Google to boost your visibility in local search results.',
+    toc: ['Set up your Google review link'],
+    sections: [
+      { title: 'Set up your Google review link', steps: [
+        { text: 'Go to Settings > Business Profile.', screenshot: true },
+        { text: 'Find the Google Review URL field.' },
+        { text: 'Paste your Google review link (find this in Google Business Profile > Ask for reviews).' },
+        { text: 'When review requests are sent, clients are directed to your Google listing.' },
+      ]},
+    ],
+    faqs: [{ q: 'Where do I find my Google review link?', a: 'Log into Google Business Profile, click Ask for Reviews, and copy the link provided.' }],
+    related: ['auto-review-requests', 'review-sources'],
+  },
+
+  {
+    id: 'understanding-average-rating',
+    categoryId: 'reviews',
+    title: 'Understanding your average rating',
+    intro: 'Your average rating is calculated from all reviews. Here\'s how it works and how to improve it.',
+    toc: ['How the rating works'],
+    sections: [
+      { title: 'How the rating works', steps: [
+        { text: 'Your average is shown on the Reviews page and your public booking page.', screenshot: true },
+        { text: 'It\'s a simple average of all review scores (1-5 stars).' },
+        { text: 'More reviews = more stable rating. A single bad review has less impact when you have many.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I remove a review?', a: 'You can\'t delete client reviews, but you can respond to them publicly to show you take feedback seriously.' }],
+    related: ['review-sources', 'handle-negative-reviews'],
+  },
+
+  {
+    id: 'handle-negative-reviews',
+    categoryId: 'reviews',
+    title: 'Handling negative reviews professionally',
+    intro: 'A negative review isn\'t the end of the world. How you respond matters more than the review itself.',
+    toc: ['How to respond'],
+    sections: [
+      { title: 'How to respond', steps: [
+        { text: 'Go to Reviews and find the negative review.', screenshot: true },
+        { text: 'Click Respond.' },
+        { text: 'Acknowledge the issue, apologise if appropriate, and offer to make it right.' },
+        { text: 'Keep it professional and brief. Potential clients read your responses too.' },
+        { text: 'Follow up privately by contacting the client directly to resolve the issue.' },
+      ]},
+    ],
+    faqs: [{ q: 'Should I respond to every negative review?', a: 'Yes. A thoughtful response shows potential clients that you care about the experience.' }],
+    related: ['review-sources', 'respond-to-reviews'],
+  },
+
+  {
+    id: 'display-reviews-booking',
+    categoryId: 'reviews',
+    title: 'Displaying reviews on your booking page',
+    intro: 'Show your best reviews on your public booking page to build trust with new clients.',
+    toc: ['Enable review display'],
+    sections: [
+      { title: 'Enable review display', steps: [
+        { text: 'Go to Settings > Online Booking (or Booking Link settings).', screenshot: true },
+        { text: 'Toggle on Show Reviews on Booking Page.' },
+        { text: 'Your average rating and recent reviews appear on your public booking page.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I choose which reviews appear?', a: 'All reviews are shown in chronological order. You can\'t selectively hide individual reviews.' }],
+    related: ['review-sources', 'auto-review-requests'],
+  },
+
+  // ─── ANALYTICS (7 new) ───
+
+  {
+    id: 'revenue-report',
+    categoryId: 'analytics',
+    title: 'Understanding your revenue report',
+    intro: 'See exactly how much your business is making — by day, week, month, or any custom period.',
+    toc: ['View revenue data'],
+    sections: [
+      { title: 'View revenue data', steps: [
+        { text: 'Go to Business > Analytics (or Analytics in the sidebar).', screenshot: true },
+        { text: 'The Revenue tab shows total revenue, broken down by services, products, and other income.' },
+        { text: 'Use the date range picker to compare periods.' },
+        { text: 'The chart shows daily revenue trends so you can spot patterns.' },
+      ]},
+    ],
+    faqs: [{ q: 'Does revenue include tips?', a: 'Tips are shown separately so you can see service revenue and tip income independently.' }],
+    related: ['analytics-overview', 'bookings-report'],
+  },
+
+  {
+    id: 'bookings-report',
+    categoryId: 'analytics',
+    title: 'Understanding your bookings report',
+    intro: 'Track how many appointments you\'re getting, which services are most popular, and how your booking volume trends.',
+    toc: ['View booking analytics'],
+    sections: [
+      { title: 'View booking analytics', steps: [
+        { text: 'Go to Analytics > Bookings tab.', screenshot: true },
+        { text: 'See total bookings, average per day, and busiest days of the week.' },
+        { text: 'Break down by service to see which treatments are most popular.' },
+        { text: 'Break down by staff to see who\'s busiest.' },
+      ]},
+    ],
+    faqs: [{ q: 'Are cancelled bookings included?', a: 'Cancelled and no-show bookings are tracked separately so they don\'t skew your active booking count.' }],
+    related: ['revenue-report', 'retention-report'],
+  },
+
+  {
+    id: 'retention-report',
+    categoryId: 'analytics',
+    title: 'Understanding your client retention report',
+    intro: 'See how well you\'re keeping clients coming back — your retention rate, rebooking rate, and churn.',
+    toc: ['View retention data'],
+    sections: [
+      { title: 'View retention data', steps: [
+        { text: 'Go to Analytics > Retention tab.', screenshot: true },
+        { text: 'Retention Rate — percentage of clients who book again within 90 days.' },
+        { text: 'Rebooking Rate — percentage who book their next appointment before leaving.' },
+        { text: 'The chart shows how retention trends over time.' },
+      ]},
+    ],
+    faqs: [{ q: 'What\'s a good retention rate?', a: 'For salons and clinics, 40-60% is average. Above 60% is excellent.' }],
+    related: ['revenue-report', 'client-lifecycle-stages'],
+  },
+
+  {
+    id: 'track-staff-performance',
+    categoryId: 'analytics',
+    title: 'Tracking staff performance',
+    intro: 'Compare team members by bookings, revenue, client satisfaction, and no-show rates.',
+    toc: ['View staff analytics'],
+    sections: [
+      { title: 'View staff analytics', steps: [
+        { text: 'Go to Analytics > Staff tab.', screenshot: true },
+        { text: 'Each staff member shows: total bookings, revenue, average rating, and no-show rate.' },
+        { text: 'Use the period selector to compare performance over different time ranges.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can staff see each other\'s performance?', a: 'No — staff can only see their own stats. Managers and Admins can see everyone.' }],
+    related: ['staff-performance', 'revenue-report'],
+  },
+
+  {
+    id: 'busiest-days-times',
+    categoryId: 'analytics',
+    title: 'Viewing your busiest days and times',
+    intro: 'Find out when your business is at its peak so you can staff accordingly and fill quiet periods.',
+    toc: ['View peak times'],
+    sections: [
+      { title: 'View peak times', steps: [
+        { text: 'Go to Analytics > Bookings tab.', screenshot: true },
+        { text: 'The heatmap shows booking density by day of week and hour.' },
+        { text: 'Dark cells = busy. Light cells = quiet.' },
+        { text: 'Use this to adjust staffing, run promotions during quiet times, or extend hours on busy days.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I share this with my team?', a: 'Yes — click Export to download the data or use your browser\'s print function.' }],
+    related: ['bookings-report', 'daily-weekly-monthly-performance'],
+  },
+
+  {
+    id: 'compare-periods',
+    categoryId: 'analytics',
+    title: 'Comparing periods — this week vs last week',
+    intro: 'See how your business is performing compared to a previous period. Spot improvements or dips instantly.',
+    toc: ['Compare periods'],
+    sections: [
+      { title: 'Compare periods', steps: [
+        { text: 'In any analytics view, use the date range picker at the top.', screenshot: true },
+        { text: 'Select your current period (e.g. This Week).' },
+        { text: 'Toggle on Compare and select the comparison period (e.g. Last Week).' },
+        { text: 'The charts show both periods overlaid with percentage differences.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I compare year on year?', a: 'Yes — select any two date ranges to compare.' }],
+    related: ['revenue-report', 'bookings-report'],
+  },
+
+  {
+    id: 'no-show-rate-trends',
+    categoryId: 'analytics',
+    title: 'Viewing your no-show rate and trends',
+    intro: 'Track how often clients miss appointments and whether it\'s getting better or worse.',
+    toc: ['View no-show data'],
+    sections: [
+      { title: 'View no-show data', steps: [
+        { text: 'Go to Analytics > Bookings tab.', screenshot: true },
+        { text: 'The No-show Rate card shows what percentage of appointments result in no-shows.' },
+        { text: 'The trend line shows whether it\'s improving over time.' },
+        { text: 'If your rate is high, consider enabling booking fees to reduce no-shows.' },
+      ]},
+    ],
+    faqs: [{ q: 'What\'s a normal no-show rate?', a: 'Industry average is 10-15%. Booking fees typically reduce this to under 5%.' }],
+    related: ['no-shows', 'booking-fees'],
+  },
+
+  // ─── MARKETING (7 new) ───
+
+  {
+    id: 'create-first-campaign',
+    categoryId: 'marketing',
+    title: 'Creating your first email campaign step by step',
+    intro: 'Send a professional email to your clients in minutes. No design skills needed — just pick a template and customise.',
+    toc: ['Create a campaign', 'Send or schedule'],
+    sections: [
+      { title: 'Create a campaign', steps: [
+        { text: 'Go to Client Portal > Email Management.', screenshot: true },
+        { text: 'Click Create Campaign.' },
+        { text: 'Choose a template or start from blank.' },
+        { text: 'Use the drag-and-drop editor to add your header, text, images, and a call-to-action button.' },
+        { text: 'Set your subject line and preview text.' },
+      ]},
+      { title: 'Send or schedule', steps: [
+        { text: 'Choose your audience — all clients, a specific tag, or a lifecycle stage.', screenshot: true },
+        { text: 'Click Send Now to send immediately, or Schedule to set a future date and time.' },
+      ]},
+    ],
+    faqs: [{ q: 'Is there a limit on how many emails I can send?', a: 'Limits depend on your plan. Check Settings > Subscription for your current allowance.' }],
+    related: ['send-email-campaign', 'segment-clients-campaigns'],
+  },
+
+  {
+    id: 'drag-drop-email-editor',
+    categoryId: 'marketing',
+    title: 'Using the drag-and-drop email editor',
+    intro: 'Build beautiful emails by dragging content blocks into place. No coding, no design software needed.',
+    toc: ['Using the editor'],
+    sections: [
+      { title: 'Using the editor', steps: [
+        { text: 'When creating a campaign, the editor opens with a blank canvas or template.', screenshot: true },
+        { text: 'Drag blocks from the left panel: headers, text, images, buttons, dividers, or social links.' },
+        { text: 'Click any block to edit its content, colours, or styling.' },
+        { text: 'Use Preview to see how it looks on desktop and mobile before sending.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I save my own templates?', a: 'Yes — after designing an email, click Save as Template to reuse it later.' }],
+    related: ['create-first-campaign', 'send-email-campaign'],
+  },
+
+  {
+    id: 'segment-clients-campaigns',
+    categoryId: 'marketing',
+    title: 'Segmenting clients for targeted campaigns',
+    intro: 'Send the right message to the right people. Target by visit frequency, spend, tags, or lifecycle stage.',
+    toc: ['Create a segment'],
+    sections: [
+      { title: 'Create a segment', steps: [
+        { text: 'When creating a campaign, click Choose Audience.', screenshot: true },
+        { text: 'Select from: All Clients, By Tag, By Lifecycle Stage (New, Active, At Risk, Lapsed), or By Service History.' },
+        { text: 'You can combine filters — e.g. Lapsed clients who previously booked Facials.' },
+        { text: 'The system shows how many clients match your segment before you send.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I save segments for reuse?', a: 'Yes — save a segment and it\'s available for future campaigns.' }],
+    related: ['create-first-campaign', 'tag-segment-clients'],
+  },
+
+  {
+    id: 'automated-follow-up-emails',
+    categoryId: 'marketing',
+    title: 'Setting up automated follow-up emails',
+    intro: 'Automatically send follow-up messages after appointments — thank you notes, aftercare tips, or rebooking nudges.',
+    toc: ['Set up automation'],
+    sections: [
+      { title: 'Set up automation', steps: [
+        { text: 'Go to Client Portal > Email Management > Automations.', screenshot: true },
+        { text: 'Click Create Automation.' },
+        { text: 'Choose a trigger: After Appointment Completed, After First Visit, or Client Becomes At Risk.' },
+        { text: 'Design the email using the same drag-and-drop editor.' },
+        { text: 'Set the delay (e.g. send 24 hours after the appointment).' },
+        { text: 'Activate. The system handles everything from here.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I have multiple automations running?', a: 'Yes — you can set up different automations for different triggers. They run independently.' }],
+    related: ['create-first-campaign', 'win-back-campaign'],
+  },
+
+  {
+    id: 'win-back-campaign',
+    categoryId: 'marketing',
+    title: 'Sending a win-back campaign to lapsed clients',
+    intro: 'Bring back clients who haven\'t visited in a while with a targeted offer or a friendly reminder.',
+    toc: ['Create a win-back campaign'],
+    sections: [
+      { title: 'Create a win-back campaign', steps: [
+        { text: 'Go to Email Management > Create Campaign.', screenshot: true },
+        { text: 'For the audience, select Lifecycle Stage > Lapsed (or At Risk).' },
+        { text: 'Write a warm message — e.g. We miss you! Here\'s 20% off your next visit.' },
+        { text: 'Include a booking link button so they can rebook in one click.' },
+        { text: 'Send or schedule. Track opens and bookings in the campaign analytics.' },
+      ]},
+    ],
+    faqs: [{ q: 'How do I know if it worked?', a: 'Campaign analytics show opens, clicks, and resulting bookings. Compare your At Risk count before and after.' }],
+    related: ['create-first-campaign', 'client-lifecycle-stages'],
+  },
+
+  {
+    id: 'track-campaign-analytics',
+    categoryId: 'marketing',
+    title: 'Tracking campaign open rates and clicks',
+    intro: 'See exactly how your emails perform — who opened them, who clicked, and who booked as a result.',
+    toc: ['View campaign stats'],
+    sections: [
+      { title: 'View campaign stats', steps: [
+        { text: 'Go to Email Management and click on a sent campaign.', screenshot: true },
+        { text: 'You\'ll see: Sent, Delivered, Opened, Clicked, and Booked.' },
+        { text: 'Click through to see which specific clients opened or clicked.' },
+        { text: 'Use these insights to improve future campaigns.' },
+      ]},
+    ],
+    faqs: [{ q: 'What\'s a good open rate?', a: 'For salon and clinic emails, 25-40% is typical. Subject lines make the biggest difference.' }],
+    related: ['create-first-campaign', 'segment-clients-campaigns'],
+  },
+
+  {
+    id: 'seasonal-promotion',
+    categoryId: 'marketing',
+    title: 'Sending a seasonal promotion',
+    intro: 'Mother\'s Day, Valentine\'s, Christmas — seasonal campaigns drive bookings. Here\'s how to create one.',
+    toc: ['Create a seasonal campaign'],
+    sections: [
+      { title: 'Create a seasonal campaign', steps: [
+        { text: 'Go to Email Management > Create Campaign.', screenshot: true },
+        { text: 'Choose a seasonal template (or design your own).' },
+        { text: 'Write a time-limited offer: gift vouchers, package deals, or discounts.' },
+        { text: 'Target all clients or a specific segment.' },
+        { text: 'Schedule it to send 2-3 weeks before the event for maximum impact.' },
+      ]},
+    ],
+    faqs: [{ q: 'When should I send seasonal campaigns?', a: 'Mother\'s Day: 2-3 weeks before. Christmas: early December. Valentine\'s: early February. Give clients time to book.' }],
+    related: ['create-first-campaign', 'send-email-campaign'],
+  },
+
+  // ─── NOTIFICATIONS (7 new) ───
+
+  {
+    id: 'booking-confirmation-messages',
+    categoryId: 'notifications',
+    title: 'Setting up booking confirmation messages',
+    intro: 'Clients receive a confirmation when they book. Customise what it says and how it\'s delivered.',
+    toc: ['Configure confirmations'],
+    sections: [
+      { title: 'Configure confirmations', steps: [
+        { text: 'Go to Settings > Notifications.', screenshot: true },
+        { text: 'Find Booking Confirmation.' },
+        { text: 'Toggle on Email and/or SMS.' },
+        { text: 'The message includes: business name, service, date, time, and your address.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I customise the message text?', a: 'The core details are automatic. You can add a custom note that appears at the bottom of the confirmation.' }],
+    related: ['client-notifications', 'appointment-reminders'],
+  },
+
+  {
+    id: 'appointment-reminders',
+    categoryId: 'notifications',
+    title: 'Setting up appointment reminders (24hr and 48hr)',
+    intro: 'Reduce no-shows by reminding clients about their upcoming appointments.',
+    toc: ['Configure reminders'],
+    sections: [
+      { title: 'Configure reminders', steps: [
+        { text: 'Go to Settings > Notifications.', screenshot: true },
+        { text: 'Find Appointment Reminders.' },
+        { text: 'Choose when to send: 24 hours before, 48 hours before, or both.' },
+        { text: 'Choose delivery method: Email, SMS, or both.' },
+        { text: 'Save. Reminders are sent automatically for every confirmed booking.' },
+      ]},
+    ],
+    faqs: [{ q: 'Do reminders reduce no-shows?', a: 'Yes — businesses that send reminders typically see no-show rates drop by 30-50%.' }],
+    related: ['client-notifications', 'sms-reminders'],
+  },
+
+  {
+    id: 'post-appointment-followups',
+    categoryId: 'notifications',
+    title: 'Setting up post-appointment follow-ups',
+    intro: 'Send a thank you message after each visit — with a review request and rebooking prompt.',
+    toc: ['Configure follow-ups'],
+    sections: [
+      { title: 'Configure follow-ups', steps: [
+        { text: 'Go to Settings > Notifications.', screenshot: true },
+        { text: 'Find Post-Appointment.' },
+        { text: 'Toggle on Follow-up Message.' },
+        { text: 'Set the delay: immediately, 1 hour, or 24 hours after completion.' },
+        { text: 'The message includes a thank you, review link, and rebooking button.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I customise the follow-up message?', a: 'You can add a custom note, but the core structure (thank you + review + rebook) stays consistent.' }],
+    related: ['auto-review-requests', 'client-notifications'],
+  },
+
+  {
+    id: 'customise-notification-messages',
+    categoryId: 'notifications',
+    title: 'Customising your notification messages',
+    intro: 'Add your own personal touch to the automatic messages your clients receive.',
+    toc: ['Customise messages'],
+    sections: [
+      { title: 'Customise messages', steps: [
+        { text: 'Go to Settings > Notifications.', screenshot: true },
+        { text: 'Click on any notification type to expand its settings.' },
+        { text: 'Add a custom note or message that\'s appended to the standard content.' },
+        { text: 'Use merge fields like {client_name} and {service_name} for personalisation.' },
+        { text: 'Click Save to apply to all future messages of that type.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I completely rewrite the messages?', a: 'You can add custom content, but the core booking details are generated automatically to ensure accuracy.' }],
+    related: ['booking-confirmation-messages', 'appointment-reminders'],
+  },
+
+  {
+    id: 'sms-pricing',
+    categoryId: 'notifications',
+    title: 'How SMS pricing works',
+    intro: 'SMS reminders cost a small amount per message. Here\'s how the pricing works.',
+    toc: ['SMS costs'],
+    sections: [
+      { title: 'SMS costs', steps: [
+        { text: 'SMS messages are sent via our messaging provider at competitive UK rates.', screenshot: true },
+        { text: 'Pricing is per message. Standard SMS (up to 160 characters) costs one credit.' },
+        { text: 'Credits are included in your subscription or can be purchased separately.' },
+        { text: 'View your SMS usage in Settings > Notifications > SMS Usage.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I disable SMS and only use email?', a: 'Yes — toggle off SMS in each notification type and keep only email enabled.' }],
+    related: ['sms-reminders', 'appointment-reminders'],
+  },
+
+  {
+    id: 'per-client-notification-prefs',
+    categoryId: 'notifications',
+    title: 'Managing notification preferences per client',
+    intro: 'Some clients prefer email, others prefer SMS. Respect their preferences by managing them individually.',
+    toc: ['Set client preferences'],
+    sections: [
+      { title: 'Set client preferences', steps: [
+        { text: 'Open the client\'s profile from CRM > Clients.', screenshot: true },
+        { text: 'Click the Notifications or Preferences tab.' },
+        { text: 'Toggle on/off: Email notifications, SMS notifications.' },
+        { text: 'If a client has opted out, the system respects their preference automatically.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can clients manage their own preferences?', a: 'Yes — they can update their notification preferences from their client portal.' }],
+    related: ['client-notifications', 'appointment-reminders'],
+  },
+
+  {
+    id: 'turn-off-notification-types',
+    categoryId: 'notifications',
+    title: 'Turning off specific notification types',
+    intro: 'Don\'t want to send review requests? Or post-appointment follow-ups? Turn off any notification type globally.',
+    toc: ['Disable a notification'],
+    sections: [
+      { title: 'Disable a notification', steps: [
+        { text: 'Go to Settings > Notifications.', screenshot: true },
+        { text: 'Find the notification type you want to disable.' },
+        { text: 'Toggle it off. No messages of that type will be sent to any client.' },
+        { text: 'You can re-enable it at any time.' },
+      ]},
+    ],
+    faqs: [{ q: 'If I disable reminders, will no-shows increase?', a: 'Very likely, yes. We strongly recommend keeping at least email reminders enabled.' }],
+    related: ['client-notifications', 'appointment-reminders'],
+  },
+
+  // ─── ONLINE BOOKING (7 new) ───
+
+  {
+    id: 'minimum-advance-notice',
+    categoryId: 'online-booking',
+    title: 'Setting minimum advance notice for bookings',
+    intro: 'Prevent clients from booking too close to the appointment time — give yourself enough prep time.',
+    toc: ['Set advance notice'],
+    sections: [
+      { title: 'Set advance notice', steps: [
+        { text: 'Go to Settings > Online Booking.', screenshot: true },
+        { text: 'Find Minimum Advance Notice.' },
+        { text: 'Set the minimum time before an appointment that clients can book: 1 hour, 4 hours, 24 hours, etc.' },
+        { text: 'Save. Clients can no longer book slots that fall within this window.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I still make last-minute bookings manually?', a: 'Yes — this only affects online booking. You can always create bookings from the calendar regardless of the advance notice setting.' }],
+    related: ['enable-online-booking', 'booking-rules'],
+  },
+
+  {
+    id: 'max-future-booking',
+    categoryId: 'online-booking',
+    title: 'Setting how far in advance clients can book',
+    intro: 'Control whether clients can book 1 week ahead or 6 months ahead.',
+    toc: ['Set the booking window'],
+    sections: [
+      { title: 'Set the booking window', steps: [
+        { text: 'Go to Settings > Online Booking.', screenshot: true },
+        { text: 'Find Maximum Advance Booking.' },
+        { text: 'Set how far ahead: 1 week, 2 weeks, 1 month, 3 months, or 6 months.' },
+        { text: 'Save. Clients can\'t see or book time slots beyond this window.' },
+      ]},
+    ],
+    faqs: [{ q: 'Why would I limit this?', a: 'If your schedule changes frequently (seasonal hours, staff changes), a shorter window prevents incorrect bookings.' }],
+    related: ['minimum-advance-notice', 'booking-rules'],
+  },
+
+  {
+    id: 'buffer-time-between-appointments',
+    categoryId: 'online-booking',
+    title: 'Adding buffer time between appointments',
+    intro: 'Add automatic gaps between bookings for cleanup, preparation, or just breathing room.',
+    toc: ['Set buffer time'],
+    sections: [
+      { title: 'Set buffer time', steps: [
+        { text: 'Go to Settings > Online Booking.', screenshot: true },
+        { text: 'Find Buffer Time Between Appointments.' },
+        { text: 'Set the number of minutes: 5, 10, 15, or 30.' },
+        { text: 'Save. The booking page now leaves this gap between every appointment.' },
+      ]},
+    ],
+    faqs: [{ q: 'Does buffer time show as blocked on my calendar?', a: 'Yes — the buffer appears as a small blocked period after each appointment.' }],
+    related: ['processing-time', 'booking-rules'],
+  },
+
+  {
+    id: 'restrict-online-services',
+    categoryId: 'online-booking',
+    title: 'Restricting which services can be booked online',
+    intro: 'Some services are better booked by phone. Control exactly what appears on your online booking page.',
+    toc: ['Manage online visibility'],
+    sections: [
+      { title: 'Manage online visibility', steps: [
+        { text: 'Go to Services > Online Booking.', screenshot: true },
+        { text: 'Toggle off any service you don\'t want available online.' },
+        { text: 'Toggled-off services still exist in your system — you can book them manually from the calendar.' },
+      ]},
+    ],
+    faqs: [{ q: 'What if a client asks about a hidden service?', a: 'They can call you to book it. You create the booking manually from the calendar.' }],
+    related: ['hide-service-online', 'manage-online-menu'],
+  },
+
+  {
+    id: 'same-day-bookings',
+    categoryId: 'online-booking',
+    title: 'Allowing or preventing same-day bookings',
+    intro: 'Choose whether clients can book an appointment for today or if they need to book at least a day ahead.',
+    toc: ['Configure same-day booking'],
+    sections: [
+      { title: 'Configure same-day booking', steps: [
+        { text: 'Go to Settings > Online Booking.', screenshot: true },
+        { text: 'Find Same-Day Booking.' },
+        { text: 'Toggle on to allow clients to book for today. Toggle off to require advance notice.' },
+        { text: 'If off, today\'s slots won\'t appear on the booking page.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I allow same-day for some services but not others?', a: 'Not currently — it\'s a global setting. Use minimum advance notice as an alternative.' }],
+    related: ['minimum-advance-notice', 'enable-online-booking'],
+  },
+
+  {
+    id: 'cancellation-rescheduling-rules',
+    categoryId: 'online-booking',
+    title: 'Setting up client cancellation and rescheduling rules',
+    intro: 'Control when and how clients can cancel or reschedule their own bookings online.',
+    toc: ['Configure rules'],
+    sections: [
+      { title: 'Configure rules', steps: [
+        { text: 'Go to Settings > Payments > Cancellation Policy.', screenshot: true },
+        { text: 'Choose your cancellation window: 24 hours, 48 hours, or 72 hours.' },
+        { text: 'Choose whether clients can reschedule (yes or no) and how close to the appointment.' },
+        { text: 'Save. Clients see these rules when they try to cancel or reschedule from their portal.' },
+      ]},
+    ],
+    faqs: [{ q: 'What if a client calls to cancel outside the portal?', a: 'You can cancel any booking manually from the calendar. The cancellation policy only restricts client self-service.' }],
+    related: ['cancellation-policy', '72-hour-cancellation'],
+  },
+
+  {
+    id: 'booking-confirmation-flow',
+    categoryId: 'online-booking',
+    title: 'How the booking confirmation flow works for clients',
+    intro: 'Here\'s the exact experience from when a client clicks Book to when they receive their confirmation.',
+    toc: ['The booking flow'],
+    sections: [
+      { title: 'The booking flow', steps: [
+        { text: 'Client selects a service, date, time, and staff member on your booking page.', screenshot: true },
+        { text: 'They enter their name, email, and phone number (or log in if they\'re returning).' },
+        { text: 'If a booking fee is required, they enter payment details and pay.' },
+        { text: 'They see a confirmation screen with all the details.' },
+        { text: 'They receive a confirmation email (and SMS if enabled).' },
+        { text: 'The booking appears on your calendar immediately.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I require approval before confirming?', a: 'Yes — enable Require Approval in Online Booking settings. Bookings arrive as Pending until you confirm.' }],
+    related: ['enable-online-booking', 'what-clients-see-booking'],
+  },
+
+  // ─── SETTINGS (7 new) ───
+
+  {
+    id: 'business-address-contact',
+    categoryId: 'settings',
+    title: 'Setting up your business address and contact details',
+    intro: 'Your address and contact details appear on your booking page, in client emails, and on invoices.',
+    toc: ['Update your details'],
+    sections: [
+      { title: 'Update your details', steps: [
+        { text: 'Go to Settings > Business Profile.', screenshot: true },
+        { text: 'Enter your full address including postcode.' },
+        { text: 'Add your business phone number and email.' },
+        { text: 'Click Save. These details update everywhere they appear.' },
+      ]},
+    ],
+    faqs: [{ q: 'Does my address show on the booking page?', a: 'Yes — clients see your address so they know where to come. It also helps with Google search visibility.' }],
+    related: ['set-up-business-profile', 'update-branding'],
+  },
+
+  {
+    id: 'configure-timezone',
+    categoryId: 'settings',
+    title: 'Configuring your time zone and date format',
+    intro: 'Make sure your calendar shows the right times by setting your time zone correctly.',
+    toc: ['Set time zone'],
+    sections: [
+      { title: 'Set time zone', steps: [
+        { text: 'Go to Settings > Business.', screenshot: true },
+        { text: 'Find Time Zone and select your location (e.g. Europe/London for the UK).' },
+        { text: 'Choose 12-hour or 24-hour time format.' },
+        { text: 'Save. Your calendar and booking page use these settings.' },
+      ]},
+    ],
+    faqs: [{ q: 'Does the system handle daylight saving time?', a: 'Yes — when set to Europe/London, the system automatically adjusts for BST/GMT.' }],
+    related: ['change-opening-hours', 'settings-overview'],
+  },
+
+  {
+    id: 'manage-subscription',
+    categoryId: 'settings',
+    title: 'Managing your subscription plan',
+    intro: 'View your current plan, upgrade for more features, or check your billing history.',
+    toc: ['View and change your plan'],
+    sections: [
+      { title: 'View and change your plan', steps: [
+        { text: 'Go to Settings > Subscription (or Business > Billing).', screenshot: true },
+        { text: 'You\'ll see your current plan, what\'s included, and your renewal date.' },
+        { text: 'Click Upgrade to see available plans and pricing.' },
+        { text: 'Click View Billing History to see past invoices.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I downgrade?', a: 'Yes — changes take effect at the end of your current billing period.' }],
+    related: ['settings-overview', 'contact-support'],
+  },
+
+  {
+    id: 'holiday-hours-closures',
+    categoryId: 'settings',
+    title: 'Setting up holiday hours and closures',
+    intro: 'Close for Christmas? Different hours on Bank Holidays? Set special hours so clients can\'t book when you\'re off.',
+    toc: ['Add special hours'],
+    sections: [
+      { title: 'Add special hours', steps: [
+        { text: 'Go to Settings > Opening Hours.', screenshot: true },
+        { text: 'Click Add Special Hours or Holiday Closure.' },
+        { text: 'Select the date(s).' },
+        { text: 'Choose Closed for the full day, or set adjusted hours.' },
+        { text: 'Save. The booking page automatically blocks those times.' },
+      ]},
+    ],
+    faqs: [{ q: 'Do existing bookings get cancelled?', a: 'No — setting a closure doesn\'t automatically cancel existing bookings. You\'ll need to review and reschedule them.' }],
+    related: ['change-opening-hours', 'set-opening-hours-first-time'],
+  },
+
+  {
+    id: 'email-sender-config',
+    categoryId: 'settings',
+    title: 'Configuring email sender name and reply address',
+    intro: 'Control what clients see in their inbox when they receive emails from your business.',
+    toc: ['Configure sender settings'],
+    sections: [
+      { title: 'Configure sender settings', steps: [
+        { text: 'Go to Settings > Notifications (or Email Settings).', screenshot: true },
+        { text: 'Set your Sender Name (e.g. Rejuvenate Skin Experts).' },
+        { text: 'Set your Reply-To Address — this is where responses go when clients hit reply.' },
+        { text: 'Save. All future emails use these settings.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I use my own email domain?', a: 'Reply-to can be any email address. The sending domain is managed by ReeveOS for deliverability.' }],
+    related: ['settings-overview', 'booking-confirmation-messages'],
+  },
+
+  {
+    id: 'account-billing-info',
+    categoryId: 'settings',
+    title: 'Viewing your account and billing information',
+    intro: 'Check your subscription status, view past invoices, and update your payment method.',
+    toc: ['View account info'],
+    sections: [
+      { title: 'View account info', steps: [
+        { text: 'Go to Settings > Subscription.', screenshot: true },
+        { text: 'View your current plan and features.' },
+        { text: 'Click Billing History to see all past invoices.' },
+        { text: 'Click Update Payment Method to change your card details.' },
+      ]},
+    ],
+    faqs: [{ q: 'When am I billed?', a: 'Monthly, on the anniversary of your sign-up date. You receive an invoice by email.' }],
+    related: ['manage-subscription', 'settings-overview'],
+  },
+
+  {
+    id: 'contact-support',
+    categoryId: 'settings',
+    title: 'How to contact ReeveOS support',
+    intro: 'Need help? Here\'s how to reach us.',
+    toc: ['Get in touch'],
+    sections: [
+      { title: 'Get in touch', steps: [
+        { text: 'Click the help icon (?) in the top right of any page.', screenshot: true },
+        { text: 'Search the help centre for answers first — most questions are covered.' },
+        { text: 'If you can\'t find what you need, click Contact Us.' },
+        { text: 'Email us at hello@reeveos.app. We aim to respond within 4 hours during business hours.' },
+      ]},
+    ],
+    faqs: [{ q: 'Is there phone support?', a: 'Not currently. Email support ensures we can give thorough, documented answers.' }],
+    related: ['settings-overview'],
+  },
+
+  // ─── DELETED ITEMS (3 new) ───
+
+  {
+    id: 'restore-cancelled-booking',
+    categoryId: 'deleted',
+    title: 'Restoring a cancelled booking',
+    intro: 'If a booking was cancelled by mistake, you can find it in Deleted Items and review the details.',
+    toc: ['Find and review cancelled bookings'],
+    sections: [
+      { title: 'Find and review cancelled bookings', steps: [
+        { text: 'Go to Deleted Items in the sidebar.', screenshot: true },
+        { text: 'Click the Cancelled Bookings tab.' },
+        { text: 'Find the booking by client name, date, or service.' },
+        { text: 'To rebook, create a new booking from the calendar with the same details.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I un-cancel a booking directly?', a: 'Cancelled bookings can\'t be restored to their original status. Create a new booking instead.' }],
+    related: ['deleted-items', 'cancel-appointment'],
+  },
+
+  {
+    id: 'what-can-be-recovered',
+    categoryId: 'deleted',
+    title: 'Understanding what can and cannot be recovered',
+    intro: 'Some items can be restored, others are permanent. Here\'s the full picture.',
+    toc: ['Recoverable vs permanent'],
+    sections: [
+      { title: 'Recoverable vs permanent', steps: [
+        { text: 'Archived products — can be restored from Deleted Items > Products.', screenshot: true },
+        { text: 'Cancelled bookings — visible for reference but must be rebooked as new appointments.' },
+        { text: 'Deleted client notes — permanently removed and cannot be recovered.' },
+        { text: 'Deactivated staff — can be reactivated from People > Staff.' },
+      ]},
+    ],
+    faqs: [{ q: 'How long are deleted items kept?', a: 'Archived items are kept indefinitely. Cancelled booking records are retained for your history.' }],
+    related: ['deleted-items', 'restore-product'],
+  },
+
+  {
+    id: 'how-long-deleted-kept',
+    categoryId: 'deleted',
+    title: 'How long deleted items are kept',
+    intro: 'Deleted and archived items are retained so you always have a complete business history.',
+    toc: ['Retention periods'],
+    sections: [
+      { title: 'Retention periods', steps: [
+        { text: 'Archived products — kept indefinitely until you permanently delete them.', screenshot: true },
+        { text: 'Cancelled bookings — kept permanently in your booking history for audit purposes.' },
+        { text: 'Client data — retained as long as you have a lawful basis under GDPR.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I permanently delete client data for GDPR?', a: 'Yes — contact support for a data deletion request. We\'ll remove the client\'s personal data permanently.' }],
+    related: ['deleted-items', 'what-can-be-recovered'],
+  },
+
+  // ─── FLOOR PLAN (5 new) ───
+
+  {
+    id: 'add-arrange-tables',
+    categoryId: 'floor-plan',
+    title: 'Adding and arranging tables on the canvas',
+    intro: 'Drag tables onto your floor plan to match your real dining room layout.',
+    toc: ['Add tables', 'Arrange the layout'],
+    sections: [
+      { title: 'Add tables', steps: [
+        { text: 'Go to Floor Plan in the sidebar.', screenshot: true },
+        { text: 'Click Add Table.' },
+        { text: 'Choose the shape: round, square, or rectangular.' },
+        { text: 'Set the table number and capacity.' },
+      ]},
+      { title: 'Arrange the layout', steps: [
+        { text: 'Drag tables to match your real room layout.', screenshot: true },
+        { text: 'Resize by dragging the corners.' },
+        { text: 'Click Save Layout when it matches your space.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I add walls and dividers?', a: 'Not currently — focus on table positions. Visual decorations are on our roadmap.' }],
+    related: ['floor-plan-setup', 'table-capacity'],
+  },
+
+  {
+    id: 'table-capacity',
+    categoryId: 'floor-plan',
+    title: 'Setting table capacity and shape',
+    intro: 'Each table has a capacity that determines how many people can be seated. Set it to match your real furniture.',
+    toc: ['Set capacity'],
+    sections: [
+      { title: 'Set capacity', steps: [
+        { text: 'Click on any table on your floor plan.', screenshot: true },
+        { text: 'Set the Capacity (e.g. 2, 4, 6, 8).' },
+        { text: 'Choose the shape: Round, Square, or Rectangle.' },
+        { text: 'Click Save. The booking system uses this to prevent overbooking.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I combine tables for larger parties?', a: 'Yes — select multiple tables and click Combine to create a larger group table.' }],
+    related: ['add-arrange-tables', 'floor-plan-setup'],
+  },
+
+  {
+    id: 'manage-reservations-floor-plan',
+    categoryId: 'floor-plan',
+    title: 'Managing reservations from the floor plan',
+    intro: 'See which tables are reserved, seated, or available at a glance and manage them directly from the floor plan.',
+    toc: ['Manage from the floor plan'],
+    sections: [
+      { title: 'Manage from the floor plan', steps: [
+        { text: 'The floor plan shows colour-coded table statuses in real time.', screenshot: true },
+        { text: 'Click an available table to seat a walk-in or assign a reservation.' },
+        { text: 'Click a reserved table to see the booking details — client name, party size, time.' },
+        { text: 'Click a seated table to view the order or start the checkout process.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can clients book specific tables online?', a: 'Clients request a party size. You or the system assigns the best available table.' }],
+    related: ['floor-plan-setup', 'table-statuses'],
+  },
+
+  {
+    id: 'table-turnover-timing',
+    categoryId: 'floor-plan',
+    title: 'Understanding table turnover and timing',
+    intro: 'The system tracks how long each table is occupied so you can optimise seating and reduce wait times.',
+    toc: ['Turnover tracking'],
+    sections: [
+      { title: 'Turnover tracking', steps: [
+        { text: 'Each table shows a timer from when the party was seated.', screenshot: true },
+        { text: 'The colour changes as the seating progresses through the meal stages.' },
+        { text: 'Use this to estimate when tables will be available for the next reservation.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I set average dining times?', a: 'Yes — set expected dining duration per party size in Floor Plan settings.' }],
+    related: ['table-statuses', 'manage-reservations-floor-plan'],
+  },
+
+  {
+    id: 'move-party-different-table',
+    categoryId: 'floor-plan',
+    title: 'Moving a party to a different table',
+    intro: 'Need to move a group? Drag them from one table to another on the floor plan.',
+    toc: ['Move a party'],
+    sections: [
+      { title: 'Move a party', steps: [
+        { text: 'On the floor plan, click and hold the occupied table.', screenshot: true },
+        { text: 'Drag it onto an available table.' },
+        { text: 'Confirm the move. The reservation and order transfer automatically.' },
+      ]},
+    ],
+    faqs: [{ q: 'Does moving a table affect the order?', a: 'No — the order stays attached to the reservation, not the physical table.' }],
+    related: ['manage-reservations-floor-plan', 'add-arrange-tables'],
+  },
+
+  // ─── CLIENT PORTAL (6 new) ───
+
+  {
+    id: 'what-clients-see-portal',
+    categoryId: 'client-portal',
+    title: 'What clients see when they log into their portal',
+    intro: 'A walkthrough of the client experience — what they can access and what it looks like from their side.',
+    toc: ['The client dashboard'],
+    sections: [
+      { title: 'The client dashboard', steps: [
+        { text: 'Clients see their upcoming appointments at the top.', screenshot: true },
+        { text: 'Below that: past bookings, messages from you, and any active packages or vouchers.' },
+        { text: 'Navigation gives them access to: Book Again, My Appointments, Shop, Forms, and Settings.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can clients see my internal notes?', a: 'No — internal notes and tags are only visible to your team.' }],
+    related: ['client-portal-overview', 'client-portal-access'],
+  },
+
+  {
+    id: 'client-booking-history-portal',
+    categoryId: 'client-portal',
+    title: 'How clients view their booking history',
+    intro: 'Clients can see all their past appointments — what they booked, when, and with whom.',
+    toc: ['View from the portal'],
+    sections: [
+      { title: 'View from the portal', steps: [
+        { text: 'Clients click My Appointments in their portal.', screenshot: true },
+        { text: 'They see upcoming and past appointments in a list.' },
+        { text: 'Each entry shows: service, date, time, staff member, and status.' },
+        { text: 'They can click any past appointment to see full details or rebook the same service.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can clients see the price they paid?', a: 'Yes — the appointment details include the amount charged.' }],
+    related: ['client-portal-overview', 'what-clients-see-portal'],
+  },
+
+  {
+    id: 'client-update-details',
+    categoryId: 'client-portal',
+    title: 'How clients update their personal details',
+    intro: 'Clients can change their name, email, phone, or address from their portal without calling you.',
+    toc: ['Update details'],
+    sections: [
+      { title: 'Update details', steps: [
+        { text: 'Clients click Settings or Profile in their portal.', screenshot: true },
+        { text: 'They update their name, email, phone, or address.' },
+        { text: 'Changes are saved immediately and reflected in your CRM.' },
+      ]},
+    ],
+    faqs: [{ q: 'Am I notified when a client updates their details?', a: 'Changes are applied silently. You can see the current details on their profile in your CRM.' }],
+    related: ['client-portal-overview', 'edit-client-details'],
+  },
+
+  {
+    id: 'client-forms-portal',
+    categoryId: 'client-portal',
+    title: 'How clients fill in consultation forms from the portal',
+    intro: 'When a consultation form is required, clients complete it directly from their portal — no paper, no extra apps.',
+    toc: ['Complete a form'],
+    sections: [
+      { title: 'Complete a form', steps: [
+        { text: 'Clients see a notification in their portal: Consultation form required.', screenshot: true },
+        { text: 'They click to open the form — fully branded with your logo and colours.' },
+        { text: 'They fill in all six sections: personal details, medical history, medications, skin, lifestyle, and consent.' },
+        { text: 'They sign digitally and submit.' },
+        { text: 'The submission appears in your Consultation Forms dashboard for review.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can clients save and come back later?', a: 'Progress is saved automatically. They can close and return to finish later.' }],
+    related: ['consultation-forms-overview', 'what-clients-see-portal'],
+  },
+
+  {
+    id: 'client-shop-portal',
+    categoryId: 'client-portal',
+    title: 'How clients browse and buy from your shop',
+    intro: 'Clients can browse your products and gift vouchers directly from their portal and buy with one click.',
+    toc: ['Shop from the portal'],
+    sections: [
+      { title: 'Shop from the portal', steps: [
+        { text: 'Clients click Shop in their portal navigation.', screenshot: true },
+        { text: 'They browse products and gift vouchers by category.' },
+        { text: 'They add items to basket and check out with their saved card or a new one.' },
+        { text: 'The order appears in your Shop > Orders for you to fulfil.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can clients buy without an account?', a: 'They need a client portal account, which is created automatically when they first book.' }],
+    related: ['how-clients-buy', 'what-clients-see-portal'],
+  },
+
+  {
+    id: 'client-notification-prefs-portal',
+    categoryId: 'client-portal',
+    title: 'How clients manage their notification preferences',
+    intro: 'Clients can choose whether to receive emails, SMS, or both — and opt out of marketing messages.',
+    toc: ['Manage preferences'],
+    sections: [
+      { title: 'Manage preferences', steps: [
+        { text: 'Clients click Settings in their portal.', screenshot: true },
+        { text: 'Under Notifications, they toggle on/off: booking confirmations, reminders, marketing emails, and SMS.' },
+        { text: 'Changes are respected immediately by the system.' },
+      ]},
+    ],
+    faqs: [{ q: 'Can I override a client\'s opt-out for transactional messages?', a: 'Booking confirmations are transactional and can still be sent even if marketing is opted out.' }],
+    related: ['per-client-notification-prefs', 'what-clients-see-portal'],
+  },
+
 ]
 
 export const ARTICLE_MAP = Object.fromEntries(ARTICLES.map(a => [a.id, a]))
