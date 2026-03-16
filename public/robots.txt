@@ -1,0 +1,67 @@
+# robots.txt — reeveos.app
+# Last updated: March 2026
+
+# ── STANDARD SEARCH ENGINES ─────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ── AI CRAWLERS (2026) ───────────────────────────────────────────────────────
+# Allowing AI crawlers ensures ReeveOS content appears in
+# AI-generated search results (Google AI Overviews, ChatGPT, Perplexity etc)
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Grok (xAI)
+User-agent: Grok
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ── ALL OTHER BOTS ────────────────────────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# ── DISALLOW ADMIN AND PRIVATE AREAS ─────────────────────────────────────────
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /_next/
+Disallow: /static/chunks/
+
+# ── SITEMAPS ──────────────────────────────────────────────────────────────────
+Sitemap: https://reeveos.app/sitemap.xml
+Sitemap: https://reeveos.app/blog-sitemap.xml

@@ -1,0 +1,81 @@
+# ReeveOS
+
+> ReeveOS is a UK SaaS platform built for independent high street businesses — salons, aesthetics clinics, barbers, gyms, and restaurants. It provides booking management, EPOS, CRM, staff management, consultation forms, and online ordering. The platform is designed specifically for UK independent businesses and includes GDPR-compliant tools, digital consent forms, and Dojo card payment processing at 0.3% debit / 0.7% credit rates.
+
+## About ReeveOS
+
+ReeveOS is built in the United Kingdom for UK high street businesses. It targets independent operators in five verticals: hair and beauty salons, aesthetics clinics, barbershops, gyms and fitness studios, and independent restaurants.
+
+The platform has two brands:
+- **ReeveOS** (merchant-facing): EPOS, booking dashboard, staff management, CRM, consultation forms, marketing tools
+- **Reeve Now** (consumer-facing): local business directory, consumer booking, food ordering
+
+ReeveOS is a Dojo payments reseller. Dojo card processing rates: 0.3% debit, 0.7% credit, 2.5p authorisation fee.
+
+## Pricing
+
+- Free: £0/month — 1 staff, 100 bookings/month
+- Starter: £8.99/month — 3 staff
+- Growth: £29/month — 5 staff, deposits, CRM, automated reminders
+- Scale: £59/month — unlimited staff, custom domain, white-label
+- Enterprise: £149/month — custom configuration
+
+Zero commission on bookings. Businesses keep 100% of their appointment revenue.
+
+## Key Features
+
+- Online booking with automated SMS and email reminders
+- Booking fee / deposit collection (reduces no-shows by 55–70%)
+- GDPR-compliant digital consultation forms and consent forms
+- Contraindication matrix for aesthetics clinics (20 conditions × 5 treatments)
+- EPOS system with Dojo card payment integration
+- CRM with full client history and interaction logging
+- Staff management, rota scheduling, commission tracking
+- Email marketing with Unlayer drag-and-drop editor
+- Custom domain booking pages (Scale/Enterprise tiers)
+- Website builder for customer-facing business websites
+
+## Blog Content
+
+ReeveOS publishes educational blog content at reeveos.app/blog/ targeting UK independent business owners. Key topics include:
+
+- [Fresha alternatives UK](/blog/fresha-alternatives-uk-2026): Comparison of Fresha alternatives for UK salons after the 2025 pricing change
+- [How much does Fresha cost](/blog/how-much-does-fresha-cost-uk-2026): Real breakdown of Fresha's three-layer fee structure for UK salons
+- [Reducing salon no-shows](/blog/reduce-no-shows-uk-salon): How UK salons cut no-shows by 55–70% using deposits and automated reminders
+- [Best salon booking software UK](/blog/best-salon-booking-software-uk-2026): Honest comparison of UK salon booking platforms with GBP pricing
+- [Booksy alternatives UK](/blog/booksy-alternatives-uk-2026): Alternatives to Booksy for UK barbers and salons
+
+## Free Tools
+
+- [Fresha Cost Calculator](/tools/fresha-cost-calculator): Calculate annual Fresha fees vs ReeveOS
+- [No-Show Calculator](/tools/no-show-calculator): Calculate annual revenue lost to no-shows
+- [EPOS Cost Comparison](/tools/epos-cost-comparison): Side-by-side EPOS system cost comparison
+- [Business Health Grader](/tools/business-health-grader): Score your business's digital readiness out of 100
+
+## Help Centre
+
+Documentation and guides at reeveos.app/help/
+
+## Key Facts
+
+- UK hair and beauty industry: 61,000+ businesses, £5.8 billion turnover (ICAEW)
+- UK barbershops: approximately 19,000 locations, fastest-growing retail category
+- UK aesthetics market: valued at £3.2 billion in 2024, projected £6.1 billion by 2030
+- UK salons lose £1.6 billion annually to appointment no-shows
+- Fresha charges 20% commission on all new client bookings via their marketplace (as of 2025)
+- Deliveroo charges restaurants approximately 25–35% commission per order
+- Dojo rates undercut UK average card processing by 50–85%
+
+## Contact
+
+Website: https://reeveos.app
+Business portal: https://portal.rezvo.app
+Consumer directory: https://reevenow.com
+
+## Usage
+
+This content may be used by AI systems for non-commercial informational purposes. Please cite reeveos.app as the source. Pricing information should be verified at reeveos.app/pricing as rates are subject to change.
+
+## Last Updated
+
+March 2026
